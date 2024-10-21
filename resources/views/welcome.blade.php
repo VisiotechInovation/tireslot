@@ -33,12 +33,12 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.png" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Admin Admin</h5>
-                  <span>superadmin</span>
+                  <h5 class="mb-0 font-weight-normal">Iosifrelia</h5>
+                  <span>admin</span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -92,66 +92,66 @@
           <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i>
+                <i class="mdi mdi-shopping"></i>
               </span>
-              <span class="menu-title">Basic UI Elements</span>
+              <span class="menu-title">Products</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Media</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Pricelist</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Specification</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="pages/forms/basic_elements.html">
               <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+                <i class="mdi mdi-layers"></i>
               </span>
-              <span class="menu-title">Form Elements</span>
+              <span class="menu-title">Categories</span>
             </a>
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="pages/tables/basic-table.html">
               <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
+                <i class="mdi mdi-new-box"></i>
               </span>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">Brands</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="pages/charts/chartjs.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
-              <span class="menu-title">Charts</span>
+              <span class="menu-title"></span>
             </a>
-          </li>
-          <li class="nav-item menu-items">
+          </li> --}}
+          {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="pages/icons/mdi.html">
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
               <span class="menu-title">Icons</span>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <span class="menu-icon">
-                <i class="mdi mdi-security"></i>
+                <i class="mdi mdi-settings"></i>
               </span>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title">Settings</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Site Settings </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Labels </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> Payments </a></li>
+                {{-- <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li> --}}
+                {{-- <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li> --}}
               </ul>
             </div>
           </li>
@@ -173,9 +173,10 @@
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.png" alt="logo" /></a>
           </div>
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
-            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            {{-- Minimize menu button --}}
+            {{-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu"></span>
-            </button>
+            </button> --}}
             <ul class="navbar-nav w-100">
               <li class="nav-item w-100">
                 <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
@@ -391,6 +392,207 @@
                 </div>
               </div>
             </div> --}}
+              {{-- Admin dashboard status --}}
+              <div class="row">
+                <div class="col-sm-4 grid-margin">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>Revenue</h5>
+                      <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                          <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">$32123</h2>
+                            <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
+                          </div>
+                          <h6 class="text-muted font-weight-normal">11.38% Since last month</h6>
+                        </div>
+                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                          <i class="icon-lg mdi mdi-codepen text-primary ms-auto"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 grid-margin">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>Sales</h5>
+                      <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                          <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">$45850</h2>
+                            <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p>
+                          </div>
+                          <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6>
+                        </div>
+                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                          <i class="icon-lg mdi mdi-wallet-travel text-danger ms-auto"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 grid-margin">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>Purchase</h5>
+                      <div class="row">
+                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                          <div class="d-flex d-sm-block d-md-flex align-items-center">
+                            <h2 class="mb-0">$2039</h2>
+                            <p class="text-danger ms-2 mb-0 font-weight-medium">-2.1% </p>
+                          </div>
+                          <h6 class="text-muted font-weight-normal">2.27% Since last month</h6>
+                        </div>
+                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                          <i class="icon-lg mdi mdi-monitor text-success ms-auto"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+ {{-- Order status --}}
+ <div class="row ">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Order Status</h4>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <div class="form-check form-check-muted m-0">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                    </label>
+                  </div>
+                </th>
+                <th> Client Name </th>
+                <th> Order No </th>
+                <th> Product Cost </th>
+                <th> Project </th>
+                <th> Payment Mode </th>
+                <th> Start Date </th>
+                <th> Payment Status </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check form-check-muted m-0">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <img src="assets/images/faces/face1.png" alt="image" />
+                  <span class="ps-2">Henry Klein</span>
+                </td>
+                <td> 02312 </td>
+                <td> $14,500 </td>
+                <td> Dashboard </td>
+                <td> Credit card </td>
+                <td> 04 Dec 2019 </td>
+                <td>
+                  <div class="badge badge-outline-success">Approved</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-muted m-0">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <img src="assets/images/faces/face2.png" alt="image" />
+                  <span class="ps-2">Estella Bryan</span>
+                </td>
+                <td> 02312 </td>
+                <td> $14,500 </td>
+                <td> Website </td>
+                <td> Cash on delivered </td>
+                <td> 04 Dec 2019 </td>
+                <td>
+                  <div class="badge badge-outline-warning">Pending</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-muted m-0">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <img src="assets/images/faces/face5.png" alt="image" />
+                  <span class="ps-2">Lucy Abbott</span>
+                </td>
+                <td> 02312 </td>
+                <td> $14,500 </td>
+                <td> App design </td>
+                <td> Credit card </td>
+                <td> 04 Dec 2019 </td>
+                <td>
+                  <div class="badge badge-outline-danger">Rejected</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-muted m-0">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <img src="assets/images/faces/face3.png" alt="image" />
+                  <span class="ps-2">Peter Gill</span>
+                </td>
+                <td> 02312 </td>
+                <td> $14,500 </td>
+                <td> Development </td>
+                <td> Online Payment </td>
+                <td> 04 Dec 2019 </td>
+                <td>
+                  <div class="badge badge-outline-success">Approved</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-muted m-0">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <img src="assets/images/faces/face4.png" alt="image" />
+                  <span class="ps-2">Sallie Reyes</span>
+                </td>
+                <td> 02312 </td>
+                <td> $14,500 </td>
+                <td> Website </td>
+                <td> Credit card </td>
+                <td> 04 Dec 2019 </td>
+                <td>
+                  <div class="badge badge-outline-success">Approved</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            {{-- Object count --}}
             <div class="row">
               <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
@@ -473,6 +675,8 @@
                 </div>
               </div>
             </div>
+
+            {{-- Tranzaction hystory and other projects --}}
             <div class="row">
               <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
@@ -500,7 +704,101 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-8 grid-margin stretch-card">
+              {{-- portofoloi photos --}}
+              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Portfolio Slide</h4>
+                    <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
+                      <div class="item">
+                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
+                      </div>
+                      <div class="item">
+                        <img src="assets/images/dashboard/Img_5.jpg" alt="">
+                      </div>
+                      <div class="item">
+                        <img src="assets/images/dashboard/img_6.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="d-flex py-4">
+                      <div class="preview-list w-100">
+                        <div class="preview-item p-0">
+                          <div class="preview-thumbnail">
+                            <img src="assets/images/faces/face12.png" class="rounded-circle" alt="">
+                          </div>
+                          <div class="preview-item-content d-flex flex-grow">
+                            <div class="flex-grow">
+                              <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                                <h6 class="preview-subject">CeeCee Bass</h6>
+                                <p class="text-muted text-small">4 Hours Ago</p>
+                              </div>
+                              <p class="text-muted">Well, it seems to be working now.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-muted">Well, it seems to be working now. </p>
+                    <div class="progress progress-md portfolio-progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{-- todo list --}}
+
+              <div class="col-md-12 col-xl-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">To do list</h4>
+                    <div class="add-items d-flex">
+                      <input type="text" class="form-control todo-list-input" placeholder="enter task..">
+                      <button class="add btn btn-primary todo-list-add-btn">Add</button>
+                    </div>
+                    <div class="list-wrapper">
+                      <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
+                        <li>
+                          <div class="form-check form-check-primary">
+                            <label class="form-check-label">
+                              <input class="checkbox" type="checkbox"> Create invoice </label>
+                          </div>
+                          <i class="remove mdi mdi-close-box"></i>
+                        </li>
+                        <li>
+                          <div class="form-check form-check-primary">
+                            <label class="form-check-label">
+                              <input class="checkbox" type="checkbox"> Meeting with Alita </label>
+                          </div>
+                          <i class="remove mdi mdi-close-box"></i>
+                        </li>
+                        <li class="completed">
+                          <div class="form-check form-check-primary">
+                            <label class="form-check-label">
+                              <input class="checkbox" type="checkbox" checked> Prepare for presentation </label>
+                          </div>
+                          <i class="remove mdi mdi-close-box"></i>
+                        </li>
+                        <li>
+                          <div class="form-check form-check-primary">
+                            <label class="form-check-label">
+                              <input class="checkbox" type="checkbox"> Plan weekend outing </label>
+                          </div>
+                          <i class="remove mdi mdi-close-box"></i>
+                        </li>
+                        <li>
+                          <div class="form-check form-check-primary">
+                            <label class="form-check-label">
+                              <input class="checkbox" type="checkbox"> Pick up kids from school </label>
+                          </div>
+                          <i class="remove mdi mdi-close-box"></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {{-- <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex flex-row justify-content-between">
@@ -600,206 +898,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
-            <div class="row">
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Revenue</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$32123</h2>
-                          <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">11.38% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-codepen text-primary ms-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Sales</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$45850</h2>
-                          <p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-wallet-travel text-danger ms-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Purchase</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$2039</h2>
-                          <p class="text-danger ms-2 mb-0 font-weight-medium">-2.1% </p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">2.27% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-monitor text-success ms-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row ">
-              <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Order Status</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </th>
-                            <th> Client Name </th>
-                            <th> Order No </th>
-                            <th> Product Cost </th>
-                            <th> Project </th>
-                            <th> Payment Mode </th>
-                            <th> Start Date </th>
-                            <th> Payment Status </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face1.jpg" alt="image" />
-                              <span class="ps-2">Henry Klein</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Dashboard </td>
-                            <td> Credit card </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-success">Approved</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face2.jpg" alt="image" />
-                              <span class="ps-2">Estella Bryan</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Website </td>
-                            <td> Cash on delivered </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-warning">Pending</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face5.jpg" alt="image" />
-                              <span class="ps-2">Lucy Abbott</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> App design </td>
-                            <td> Credit card </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-danger">Rejected</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face3.jpg" alt="image" />
-                              <span class="ps-2">Peter Gill</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Development </td>
-                            <td> Online Payment </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-success">Approved</div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="assets/images/faces/face4.jpg" alt="image" />
-                              <span class="ps-2">Sallie Reyes</span>
-                            </td>
-                            <td> 02312 </td>
-                            <td> $14,500 </td>
-                            <td> Website </td>
-                            <td> Credit card </td>
-                            <td> 04 Dec 2019 </td>
-                            <td>
-                              <div class="badge badge-outline-success">Approved</div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
+
+
+{{-- message --}}
+            {{-- <div class="row">
               <div class="col-md-6 col-xl-4 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -868,97 +972,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-xl-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Portfolio Slide</h4>
-                    <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
-                      <div class="item">
-                        <img src="assets/images/dashboard/Rectangle.jpg" alt="">
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/dashboard/Img_5.jpg" alt="">
-                      </div>
-                      <div class="item">
-                        <img src="assets/images/dashboard/img_6.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="d-flex py-4">
-                      <div class="preview-list w-100">
-                        <div class="preview-item p-0">
-                          <div class="preview-thumbnail">
-                            <img src="assets/images/faces/face12.jpg" class="rounded-circle" alt="">
-                          </div>
-                          <div class="preview-item-content d-flex flex-grow">
-                            <div class="flex-grow">
-                              <div class="d-flex d-md-block d-xl-flex justify-content-between">
-                                <h6 class="preview-subject">CeeCee Bass</h6>
-                                <p class="text-muted text-small">4 Hours Ago</p>
-                              </div>
-                              <p class="text-muted">Well, it seems to be working now.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="text-muted">Well, it seems to be working now. </p>
-                    <div class="progress progress-md portfolio-progress">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-xl-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">To do list</h4>
-                    <div class="add-items d-flex">
-                      <input type="text" class="form-control todo-list-input" placeholder="enter task..">
-                      <button class="add btn btn-primary todo-list-add-btn">Add</button>
-                    </div>
-                    <div class="list-wrapper">
-                      <ul class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Create invoice </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Meeting with Alita </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li class="completed">
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox" checked> Prepare for presentation </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Plan weekend outing </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                        <li>
-                          <div class="form-check form-check-primary">
-                            <label class="form-check-label">
-                              <input class="checkbox" type="checkbox"> Pick up kids from school </label>
-                          </div>
-                          <i class="remove mdi mdi-close-box"></i>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            </div> --}}
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
