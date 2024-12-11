@@ -10,9 +10,7 @@
    </svg>
   </button>
   <!-- Logo-->
-  <a href="<?php echo e(route('dashboard')); ?>" class="logo display--desktop">
-   <img src="/images/dashboard/navbar/logo.png" alt="logo">
-  </a>
+  
   <button class="button button--primary button--centered" tooltip="Open Searchbar" tooltip-bottom
    onclick="focusTo('search__input')" id="search__open">
    <svg>
@@ -20,9 +18,7 @@
     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
    </svg>
   </button>
-  <a href="<?php echo e(route('dashboard')); ?>" class="logo display--mobile">
-   <img src="/images/dashboard/navbar/mini-logo.png" alt="mini-logo">
-  </a>
+  
   <button class="button button--primary button--centered" tooltip="Open Notifications" tooltip-left id="notify__open">
    <svg>
     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>

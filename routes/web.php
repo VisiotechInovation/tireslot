@@ -29,7 +29,7 @@
 
 
   route::middleware(['auth', 'usertype'])->group(function () {
-    Route::prefix('embadmin')->group(function () {
+    Route::prefix('panel')->group(function () {
 
       route::get('/forcelogout', [AdminController::class, 'forceLogoutAndForgetUser'])->name('forcelogout');
       route::get('/', [HomeController::class, 'redirect'])->middleware('auth', 'verified')->name('dashboard');
@@ -185,5 +185,5 @@
   Route::get('/login', function () {
     throw new NotFoundHttpException();
   });
-  Route::get('/embadmin/login', [AuthenticatedSessionController::class, 'create'])->name('login');
-  Route::post('/embadmin/login', [AuthenticatedSessionController::class, 'store']);
+  Route::get('/panel/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+  Route::post('/panel/login', [AuthenticatedSessionController::class, 'store']);

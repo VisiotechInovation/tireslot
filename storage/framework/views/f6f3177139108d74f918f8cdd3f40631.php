@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="<?php echo e(str_replace("_", "-", app()->getLocale())); ?>">
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-      <title><?php echo e(__("Embianz")); ?></title>
-      <link rel="icon" type="image/x-icon" href="/favicon.png">
-      <link rel="stylesheet" href="/dist/css/dashboard.css">
-  </head>
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 
-    <body>
-<?php if (isset($component)) { $__componentOriginalb5e767ad160784309dfcad41e788743b = $component; } ?>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+ <title><?php echo e(__('Tireslot Panel')); ?></title>
+ <link rel="icon" type="image/x-icon" href="/favicon.png" sizes="32x32">
+ <link rel="icon" type="image/x-icon" href="/favicon_192.png" sizes="192x192">
+
+ <link rel="stylesheet" href="/dist/css/dashboard.css">
+</head>
+
+<body>
+ <?php if (isset($component)) { $__componentOriginalb5e767ad160784309dfcad41e788743b = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginalb5e767ad160784309dfcad41e788743b = $attributes; } ?>
 <?php $component = App\View\Components\Alert::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('alert'); ?>
