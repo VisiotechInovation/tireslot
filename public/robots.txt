@@ -1,0 +1,3 @@
+User-agent: *  
+ Disallow: /embadmin 
+ Sitemap: https://embianz.com/sitemap.xml 
