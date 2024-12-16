@@ -232,7 +232,7 @@ body {
   overscroll-behavior: contain;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
-  background: #4f536a;
+  background: #213347;
   width: 100%;
   height: 100dvh;
   margin: 0;
@@ -370,10 +370,10 @@ svg {
   margin: calc(margin / 2) 0;
 }
 .line--primary {
-  border-color: #393c4d;
+  border-color: #111a24;
 }
 .line--secondary {
-  border-color: #fAfAfA;
+  border-color: #ffd500;
 }
 
 @keyframes loginValidationFail {
@@ -496,7 +496,7 @@ svg {
   width: 35px;
   height: 35px;
   background-color: #cacaca;
-  color: #393c4d;
+  color: #111a24;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -572,82 +572,82 @@ svg {
   padding: 0;
 }
 .button--primary {
-  color: #fAfAfA;
-  background-color: #2e313e;
+  color: #ffd500;
+  background-color: #090d13;
 }
 @media (hover: hover) {
   .button--primary:hover {
-    background-color: #232530;
+    background-color: #010101;
     outline: none;
   }
   .button--primary:active {
-    background-color: #0e0e12;
+    background-color: black;
     outline: none;
   }
   .button--primary:focus-visible {
-    background-color: #0e0e12;
-    outline: 2px solid #0e0e12;
+    background-color: black;
+    outline: 2px solid black;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .button--primary:active {
-    background-color: #0e0e12;
+    background-color: black;
     outline: none;
   }
 }
 .button--secondary {
-  color: #393c4d;
-  background-color: #fAfAfA;
+  color: #111a24;
+  background-color: #ffd500;
 }
 @media (hover: hover) {
   .button--secondary:hover {
-    background-color: #ededed;
+    background-color: #e6c000;
     outline: none;
   }
   .button--secondary:active {
-    background-color: #c7c7c7;
+    background-color: #998000;
     outline: none;
   }
   .button--secondary:focus-visible {
-    background-color: #c7c7c7;
-    outline: 2px solid #c7c7c7;
+    background-color: #998000;
+    outline: 2px solid #998000;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .button--secondary:active {
-    background-color: #c7c7c7;
+    background-color: #998000;
     outline: none;
   }
 }
 .button--active {
-  color: #393c4d;
-  background-color: #fAfAfA;
+  color: #111a24;
+  background-color: #ffd500;
 }
 @media (hover: hover) {
   .button--active:hover {
-    background-color: #ededed;
+    background-color: #e6c000;
     outline: none;
   }
   .button--active:active {
-    background-color: #c7c7c7;
+    background-color: #998000;
     outline: none;
   }
   .button--active:focus-visible {
-    background-color: #c7c7c7;
-    outline: 2px solid #c7c7c7;
+    background-color: #998000;
+    outline: 2px solid #998000;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .button--active:active {
-    background-color: #c7c7c7;
+    background-color: #998000;
     outline: none;
   }
 }
 .button--danger {
-  color: #fAfAfA;
+  color: #ffd500;
   background-color: #ED2939;
 }
 @media (hover: hover) {
@@ -782,7 +782,7 @@ svg {
   width: max-width;
   height: 35px;
   background-color: #e1e1e1;
-  color: #393c4d;
+  color: #111a24;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -833,7 +833,7 @@ svg {
   border: none;
   outline: none;
   overflow: hidden;
-  color: #393c4d;
+  color: #111a24;
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
@@ -884,7 +884,7 @@ svg {
   top: calc(50% + 25px);
   left: 7.5px;
   transform: translateY(calc(-50% - 25px));
-  color: #393c4d;
+  color: #111a24;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 500;
   line-height: 150%;
@@ -901,7 +901,7 @@ svg {
   top: -25px;
   left: 0;
   transform: translateY(0);
-  color: #fAfAfA;
+  color: #ffd500;
   opacity: 1;
 }
 
@@ -914,7 +914,7 @@ svg {
   width: 100%;
   height: auto;
   resize: vertical;
-  color: #393c4d;
+  color: #111a24;
   background: #fAfAfA;
   padding: 7.5px;
   border: none;
@@ -965,7 +965,7 @@ svg {
   top: calc(50% + 25px);
   left: 7.5px;
   transform: translateY(calc(-50% - 25px));
-  color: #393c4d;
+  color: #111a24;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 500;
   line-height: 150%;
@@ -978,7 +978,7 @@ svg {
   top: -25px;
   left: 0;
   transform: translateY(0);
-  color: #fAfAfA;
+  color: #ffd500;
   opacity: 1;
 }
 
@@ -1103,28 +1103,28 @@ svg {
 
 *::-webkit-scrollbar-track {
   border-radius: 20px;
-  background-color: #fAfAfA;
+  background-color: #ffd500;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #fAfAfA;
+  background-color: #ffd500;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #fAfAfA;
+  background-color: #ffd500;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #393c4d;
+  background-color: #111a24;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #393c4d;
+  background-color: #111a24;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #393c4d;
+  background-color: #111a24;
 }
 
 *::-moz-scrollbar-button:decrement,
@@ -1251,14 +1251,14 @@ svg {
 
 .radio--primary input:checked + span:before,
 .switch--primary input:checked + span:before {
-  background: #393c4d;
-  border-color: #fAfAfA;
+  background: #111a24;
+  border-color: #ffd500;
 }
 
 .radio--secondary input:checked + span:before,
 .switch--secondary input:checked + span:before {
-  background: #fAfAfA;
-  border-color: #fAfAfA;
+  background: #ffd500;
+  border-color: #ffd500;
 }
 
 .radioGroup {
@@ -1302,21 +1302,21 @@ svg {
 }
 
 .radioGroup--primary label:hover input + span {
-  border-color: #393c4d;
+  border-color: #111a24;
 }
 
 .radioGroup--primary label input:checked + span {
-  background: #393c4d;
-  border-color: #393c4d;
+  background: #111a24;
+  border-color: #111a24;
 }
 
 .radioGroup--secondary label:hover input + span {
-  border-color: #fAfAfA;
+  border-color: #ffd500;
 }
 
 .radioGroup--secondary label input:checked + span {
-  background: #fAfAfA;
-  border-color: #fAfAfA;
+  background: #ffd500;
+  border-color: #ffd500;
 }
 
 .checkbox__details {
@@ -1497,8 +1497,8 @@ svg {
   transition: transform 0.3s ease, opacity 0.2s ease, background 0.2s ease;
 }
 .checkbox--primary input:checked + label:before {
-  background: #393c4d;
-  border-color: #393c4d;
+  background: #111a24;
+  border-color: #111a24;
 }
 .checkbox--primary input:checked + label:after {
   opacity: 1;
@@ -1562,8 +1562,8 @@ svg {
   transition: transform 0.3s ease, opacity 0.2s ease, background 0.2s ease;
 }
 .checkbox--secondary input:checked + label:before {
-  background: #fAfAfA;
-  border-color: #fAfAfA;
+  background: #ffd500;
+  border-color: #ffd500;
 }
 .checkbox--secondary input:checked + label:after {
   opacity: 1;
@@ -1575,7 +1575,7 @@ svg {
 }
 
 .error {
-  color: #fAfAfA;
+  color: #ffd500;
   background-color: #ED2939;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 900;
@@ -1740,7 +1740,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #393c4d;
+  background: #111a24;
   padding: 7.5px;
   border-radius: 4px;
   gap: 7.5px;
@@ -1756,7 +1756,7 @@ svg {
   justify-content: space-between;
   flex-direction: column;
   gap: 7.5px;
-  background: #393c4d;
+  background: #111a24;
   padding: 0 7.5px 7.5px 7.5px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -1883,7 +1883,7 @@ svg {
 header {
   width: 100%;
   height: 50px;
-  background: #393c4d;
+  background: #111a24;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   padding-left: 7.5px;
   padding-right: 7.5px;
@@ -1928,14 +1928,14 @@ nav.nav--home {
   position: fixed;
   display: inline-block;
   padding: 7.5px;
-  background: #393c4d;
+  background: #111a24;
   z-index: 1050;
   transition: all 0.25s ease-in-out;
   overflow-y: auto;
   padding-bottom: 75px;
 }
 .aside h3 {
-  color: #fAfAfA;
+  color: #ffd500;
   font-size: clamp(16px, 2vw, 18px);
   font-weight: 500;
 }
@@ -2026,7 +2026,7 @@ nav.nav--home {
   justify-content: flex-start;
   padding: 7.5px;
   border-radius: 4px;
-  background: #393c4d;
+  background: #111a24;
 }
 .aside--table.active {
   transform: translate(-50%, -50%) scale(1);
@@ -2055,7 +2055,7 @@ nav.nav--home {
   width: 100%;
   height: 1.5px;
   margin-top: 7.5px;
-  background-color: #393c4d;
+  background-color: #111a24;
   border-radius: 8px;
 }
 .aside--controls {
@@ -2087,7 +2087,7 @@ nav.nav--home {
   margin: 7.5px 0;
   border-radius: 8px;
   padding: 7.5px;
-  background: #393c4d;
+  background: #111a24;
   overflow-y: auto;
   overflow-x: hidden;
   margin-bottom: 7.5px;
@@ -2141,7 +2141,7 @@ nav.nav--home {
   font-size: clamp(18px, 2.25vw, 20px);
   font-weight: 500;
   line-height: 150%;
-  color: #fAfAfA;
+  color: #ffd500;
   margin: 0;
   margin-top: 7.5px;
   flex: 1;
@@ -2153,7 +2153,7 @@ nav.nav--home {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #fAfAfA;
+  background: #ffd500;
   border-radius: 8px;
 }
 
@@ -2194,7 +2194,7 @@ nav.nav--home {
   font-weight: 700;
 }
 .expandable-table > thead th {
-  background-color: #232530;
+  background-color: #010101;
   border: none;
   text-align: center;
   border-right: 1px solid #797979;
@@ -2206,8 +2206,8 @@ nav.nav--home {
   width: 0% !important;
 }
 .expandable-table > tbody {
-  border-top: 1px solid #fAfAfA;
-  border-bottom: 1px solid #fAfAfA;
+  border-top: 1px solid #ffd500;
+  border-bottom: 1px solid #ffd500;
 }
 .expandable-table > tbody td {
   font-size: 12px;
@@ -2230,7 +2230,7 @@ nav.nav--home {
   width: 0% !important;
 }
 .expandable-table > tbody tr:nth-child(4n+1) {
-  background: #2e313e;
+  background: #090d13;
 }
 .expandable-table input:not(.input__searchable), .expandable-table select, .expandable-table textarea {
   min-width: 150px;
@@ -2252,7 +2252,7 @@ nav.nav--home {
   text-wrap: balance;
 }
 .expandable-table th {
-  background-color: #393c4d;
+  background-color: #111a24;
 }
 .expandable-table td {
   width: auto;
@@ -2261,30 +2261,30 @@ nav.nav--home {
   transition: background-color 0.3s ease;
 }
 .expandable-table .expandable-row:hover {
-  background-color: #181a21;
+  background-color: black;
 }
 .expandable-table .expandable-row.active {
-  background: #fAfAfA;
+  background: #ffd500;
 }
 .expandable-table .expandable-row.active td {
-  color: #393c4d;
-  border-color: #393c4d;
+  color: #111a24;
+  border-color: #111a24;
 }
 .expandable-table .expandable-row.active td a {
-  color: #393c4d;
+  color: #111a24;
 }
 .expandable-table .expandable-row.active td .checkbox span::before {
-  border-color: #393c4d;
+  border-color: #111a24;
 }
 .expandable-table .expandable-row.active td .button {
-  background-color: #393c4d;
-  color: #fAfAfA;
+  background-color: #111a24;
+  color: #ffd500;
 }
 .expandable-table .details {
   gap: 5px;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #393c4d;
+  background-color: #111a24;
   padding: 7.5px;
 }
 .expandable-table .details p {
@@ -2346,7 +2346,7 @@ nav.nav--home {
   width: 100%;
   display: none;
   overflow: auto;
-  border-bottom: 2px solid #fAfAfA;
+  border-bottom: 2px solid #ffd500;
   margin: 7.5px 0;
 }
 
@@ -2423,7 +2423,7 @@ nav.nav--home {
 .login__label > input:hover + span, .login__label > input:focus + span, .login__label > input:autofill + span, .login__label > input:not(:placeholder-shown) + span {
   opacity: 1;
   transform: translateY(-165%) translateX(-15%) scale(0.75);
-  color: #fAfAfA;
+  color: #ffd500;
 }
 @media (hover: hover) {
   .login__label > input:hover {
@@ -2452,7 +2452,7 @@ nav.nav--home {
   left: 3.75px;
   top: 50%;
   transform: translateY(-50%);
-  color: #393c4d;
+  color: #111a24;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 500;
   line-height: 150%;
@@ -2503,12 +2503,12 @@ nav.nav--home {
 }
 
 .login__eye {
-  color: #393c4d;
+  color: #111a24;
   display: block;
 }
 .login__eye--closed {
   display: none;
-  color: #393c4d;
+  color: #111a24;
 }
 
 .login__button {
@@ -2517,8 +2517,8 @@ nav.nav--home {
   min-height: 35px;
   padding: 15px;
   margin-top: 25px;
-  background: #fAfAfA;
-  color: #393c4d;
+  background: #ffd500;
+  color: #111a24;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 500;
   line-height: 150%;
@@ -2534,23 +2534,23 @@ nav.nav--home {
 }
 @media (hover: hover) {
   .login__button:hover {
-    background-color: #ededed;
+    background-color: #e6c000;
     outline: none;
   }
   .login__button:active {
-    background-color: #c7c7c7;
+    background-color: #998000;
     outline: none;
     transform: scale(0.95);
   }
   .login__button:focus-visible {
-    background-color: #c7c7c7;
-    outline: 2px solid #c7c7c7;
+    background-color: #998000;
+    outline: 2px solid #998000;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .login__button:active {
-    background-color: #c7c7c7;
+    background-color: #998000;
     outline: none;
   }
 }

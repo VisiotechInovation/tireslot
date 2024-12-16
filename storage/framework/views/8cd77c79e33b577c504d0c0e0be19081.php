@@ -1,82 +1,6 @@
 <div>
  <main>
-  <!---------------------- Slider Images --------------------->
-  <?php if(!$slideritems->isEmpty()): ?>
-   <div class="main-slider">
-    <div class="main-slider__wrapper">
-     <?php $__currentLoopData = $slideritems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-      
-      <a class="main-slider__slide"
-       href="<?php echo e(route('products', ['categorySlug' => $item->seo_id !== null && $item->seo_id !== '' ? $item->seo_id : $item->id])); ?>"
-       draggable="false">
-       <picture>
-        <?php if($item->media != null): ?>
-         
-         <?php if($item->media->where('sequence', 2)->first() != null): ?>
-          <source media="(min-width: 992px)" sizes="(min-width: 992px) 50vw"
-           srcset="/<?php echo e($item->media->where('sequence', 2)->first()->path); ?><?php echo e($item->media->where('sequence', 2)->first()->name); ?>"
-           loading="eager" fetchpriority="high" height="<?php echo e($item->media->where('sequence', 2)->first()->height); ?>"
-           width="<?php echo e($item->media->where('sequence', 2)->first()->width); ?>">
-         <?php else: ?>
-          <source media="(min-width: 992px)" sizes="(min-width: 992px) 50vw" srcset="/images/store/default/default.webp"
-           loading="eager" fetchpriority="high">
-         <?php endif; ?>
-         
-         <?php if($item->media->where('sequence', 3)->first() != null): ?>
-          <source title="<?php echo e($item->media->where('sequence', 3)->first()->name); ?>" media="(min-width: 576px)"
-           sizes="(min-width: 576px) 80vw"
-           srcset="/<?php echo e($item->media->where('sequence', 3)->first()->path); ?><?php echo e($item->media->where('sequence', 3)->first()->name); ?>"
-           loading="eager" fetchpriority="high" height="<?php echo e($item->media->where('sequence', 3)->first()->height); ?>"
-           width="<?php echo e($item->media->where('sequence', 3)->first()->width); ?>">
-         <?php elseif($item->media->where('sequence', 2)->first() != null): ?>
-          <source title="<?php echo e($item->media->where('sequence', 2)->first()->name); ?>" media="(min-width: 576px)"
-           sizes="(min-width: 576px) 80vw"
-           srcset="/<?php echo e($item->media->where('sequence', 2)->first()->path); ?><?php echo e($item->media->where('sequence', 2)->first()->name); ?>"
-           loading="eager" fetchpriority="high" height="<?php echo e($item->media->where('sequence', 2)->first()->height); ?>"
-           width="<?php echo e($item->media->where('sequence', 2)->first()->width); ?>">
-         <?php else: ?>
-          <source title="Default image" media="(min-width: 576px)" sizes="(min-width: 576px) 80vw"
-           srcset="/images/store/default/default640.webp" loading="eager" fetchpriority="high">
-         <?php endif; ?>
-         
-         <?php if($item->media->where('sequence', 4)->first() != null): ?>
-          <img title="<?php echo e($item->name); ?>" sizes="100vw" alt="<?php echo e($item->name); ?>"
-           src="/<?php echo e($item->media->where('sequence', 4)->first()->path); ?><?php echo e($item->media->where('sequence', 4)->first()->name); ?>"
-           loading="eager" fetchpriority="high" height="<?php echo e($item->media->where('sequence', 4)->first()->height); ?>"
-           width="<?php echo e($item->media->where('sequence', 4)->first()->width); ?>">
-         <?php elseif($item->media->where('sequence', 3)->first() != null): ?>
-          <img title="<?php echo e($item->name); ?>" sizes="100vw" alt="<?php echo e($item->name); ?>"
-           src="/<?php echo e($item->media->where('sequence', 3)->first()->path); ?><?php echo e($item->media->where('sequence', 3)->first()->name); ?>"
-           loading="eager" fetchpriority="high" height="<?php echo e($item->media->where('sequence', 3)->first()->height); ?>"
-           width="<?php echo e($item->media->where('sequence', 3)->first()->width); ?>">
-         <?php elseif($item->media->where('sequence', 2)->first() != null): ?>
-          <img title="<?php echo e($item->name); ?>" sizes="100vw" alt="<?php echo e($item->name); ?>"
-           src="/<?php echo e($item->media->where('sequence', 2)->first()->path); ?><?php echo e($item->media->where('sequence', 2)->first()->name); ?>"
-           loading="eager" fetchpriority="high" height="<?php echo e($item->media->where('sequence', 2)->first()->height); ?>"
-           width="<?php echo e($item->media->where('sequence', 2)->first()->width); ?>">
-         <?php else: ?>
-          <img title="Default image" src="/images/store/default/default300.webp" alt="something wrong">
-         <?php endif; ?>
-        <?php else: ?>
-         <img title="Default image" src="/images/store/default/default300.webp" alt="something wrong">
-        <?php endif; ?>
-       </picture>
-      </a>
-     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </div>
 
-    <button class="main-slider__button prev" aria-label="Previous main slider">
-     <svg>
-      <polyline points="15 18 9 12 15 6"></polyline>
-     </svg>
-    </button>
-    <button class="main-slider__button next" aria-label="Next main slider">
-     <svg>
-      <polyline points="9 18 15 12 9 6"></polyline>
-     </svg>
-    </button>
-   </div>
-  <?php endif; ?>
 
   <?php
    if (app()->has('global_numberformat_element')) {
@@ -159,7 +83,7 @@ echo $html;
         <?php
         $price = null;
         $discount = false;
-        
+
         if ($product->product_prices->count() != 0) {
             $price = number_format($product->product_prices->first()->value, 2, $decimal, $mill);
             $discount = $product->product_prices->first()->discount != 0 ? true : false;
@@ -374,7 +298,7 @@ echo $html;
         <?php
         $price = null;
         $discount = false;
-        
+
         if ($product->product_prices->count() != 0) {
             $price = number_format($product->product_prices->first()->value, 2, $decimal, $mill);
             $discount = $product->product_prices->first()->discount != 0 ? true : false;

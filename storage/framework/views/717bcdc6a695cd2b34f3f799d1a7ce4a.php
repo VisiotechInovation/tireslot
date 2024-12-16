@@ -1,6 +1,6 @@
 <?php if (isset($component)) { $__componentOriginal5447a5d860669decf25912223211952e = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal5447a5d860669decf25912223211952e = $attributes; } ?>
-<?php $component = App\View\Components\StoreHead::resolve(['title' => getTitle(),'description' => getDescription(),'preload' => $preload] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = App\View\Components\StoreHead::resolve(['preload' => $preload] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('store-head'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -20,52 +20,32 @@
 <?php endif; ?>
 
 <?php
- function getTitle()
- {
-     try {
-         return app('global_mainpage_metatitle');
-     } catch (\Throwable $e) {
-         return '';
-     }
- }
-
- function getDescription()
- {
-     try {
-         return app('global_mainpage_metadescription');
-     } catch (\Throwable $e) {
-         return '';
-     }
- }
-?>
-
-<?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('store-header')->html();
-} elseif ($_instance->childHasBeenRendered('VMjU4Us')) {
-    $componentId = $_instance->getRenderedChildComponentId('VMjU4Us');
-    $componentTag = $_instance->getRenderedChildComponentTagName('VMjU4Us');
+} elseif ($_instance->childHasBeenRendered('pFdGVTo')) {
+    $componentId = $_instance->getRenderedChildComponentId('pFdGVTo');
+    $componentTag = $_instance->getRenderedChildComponentTagName('pFdGVTo');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('VMjU4Us');
+    $_instance->preserveRenderedChild('pFdGVTo');
 } else {
     $response = \Livewire\Livewire::mount('store-header');
     $html = $response->html();
-    $_instance->logRenderedChild('VMjU4Us', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('pFdGVTo', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('store-main')->html();
-} elseif ($_instance->childHasBeenRendered('uYKlo3c')) {
-    $componentId = $_instance->getRenderedChildComponentId('uYKlo3c');
-    $componentTag = $_instance->getRenderedChildComponentTagName('uYKlo3c');
+} elseif ($_instance->childHasBeenRendered('4p8numO')) {
+    $componentId = $_instance->getRenderedChildComponentId('4p8numO');
+    $componentTag = $_instance->getRenderedChildComponentTagName('4p8numO');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('uYKlo3c');
+    $_instance->preserveRenderedChild('4p8numO');
 } else {
     $response = \Livewire\Livewire::mount('store-main');
     $html = $response->html();
-    $_instance->logRenderedChild('uYKlo3c', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('4p8numO', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

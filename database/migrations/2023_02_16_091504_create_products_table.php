@@ -19,9 +19,7 @@ return new class extends Migration
       $table->string('name')->nullable();
       $table->unsignedBigInteger('brand_id')->index()->nullable();
 
-      $table->string('brand')->nullable()->default(
-        'noren'
-      );
+
       $table->string('type')->nullable()->default(
         'standard'
       );

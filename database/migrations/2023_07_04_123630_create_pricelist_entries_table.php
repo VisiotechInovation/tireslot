@@ -19,6 +19,8 @@ return new class extends Migration
       $table->foreign('pricelist_id')->references('id')->on('price_lists');
       $table->decimal('value', 10, 2)->nullable();
       $table->decimal('value_no_vat', 10, 2)->nullable();
+      $table->decimal('value_no_discount', 10, 2)->nullable();
+
       $table->integer('discount')->default(
         '0'
       );

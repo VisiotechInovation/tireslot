@@ -19,12 +19,23 @@
    <a class="button button--fill button--flexed button--primary @if ($active == 'dashboard') button--active @endif"
     href="{{ route('dashboard') }}">
     <svg>
-     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-     <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-     <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-     <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+     <line x1="8" y1="21" x2="16" y2="21"></line>
+     <line x1="12" y1="17" x2="12" y2="21"></line>
     </svg>
     <span>Dashboard</span>
+   </a>
+   {{-- Brands --}}
+   <a class="button button--fill button--flexed button--primary @if ($active == 'brand') button--active @endif"
+    href="{{ route('all_brands') }}">
+    <svg>
+     <path
+      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+     </path>
+     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+     <line x1="12" y1="22.08" x2="12" y2="12"></line>
+    </svg>
+    <span>Brands</span>
    </a>
    {{-- categories --}}
    <a class="button button--fill button--flexed button--primary @if ($active == 'category') button--active @endif"
@@ -42,41 +53,15 @@
    <a class="button button--fill button--flexed button--primary @if ($active == 'product') button--active @endif"
     href="{{ route('all_products') }}">
     <svg>
-     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-     <path d="M3 21l18 0" />
-     <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
-     <path d="M5 21l0 -10.15" />
-     <path d="M19 21l0 -10.15" />
-     <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+     <rect x="1" y="3" width="15" height="13"></rect>
+     <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+     <circle cx="5.5" cy="18.5" r="2.5"></circle>
+     <circle cx="18.5" cy="18.5" r="2.5"></circle>
     </svg>
     <span>Products</span>
    </a>
-   {{-- Promotions --}}
-   <a class="button button--fill button--flexed button--primary @if ($active == 'promotion') button--active @endif"
-    href="{{ route('all_promotions') }}">
-    <svg>
-     <g id="SVGRepo_bgCarrier" stroke-width="0" />
-     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-     <g id="SVGRepo_iconCarrier">
-      <path fill-rule="evenodd" clip-rule="evenodd"
-       d="M20.0848 16.9323C20.5298 12.6556 20.5298 8.34432 20.0848 4.06762C19.9261 2.54257 18.1678 1.77006 16.9372 2.68478L12.8336 5.73519C11.5831 6.6647 10.0665 7.16665 8.5084 7.16665H4.6792C3.98884 7.16665 3.4292 7.72629 3.4292 8.41664V12.5833C3.4292 13.2737 3.98884 13.8333 4.6792 13.8333H5.30348L4.45812 16.9882C4.36392 17.3398 4.53573 17.7082 4.86559 17.8621L8.54674 19.5787C8.74766 19.6724 8.97974 19.6724 9.18067 19.5787C9.3816 19.485 9.53078 19.3072 9.58815 19.093L10.8508 14.3806C10.8643 14.3306 10.8723 14.2803 10.8753 14.2305C11.5727 14.4714 12.2338 14.8189 12.8336 15.2648L16.9372 18.3152C18.1677 19.2299 19.9261 18.4574 20.0848 16.9323ZM18.5928 4.22285C19.0271 8.39634 19.0271 12.6036 18.5928 16.7771C18.5545 17.1457 18.1295 17.3324 17.8321 17.1114L13.7284 14.0609C12.2193 12.9391 10.3888 12.3333 8.50839 12.3333L4.9292 12.3333L4.9292 8.66665H8.5084C10.3888 8.66665 12.2193 8.06085 13.7284 6.93902L17.8321 3.88861C18.1295 3.66752 18.5545 3.85424 18.5928 4.22285ZM9.43615 13.8929C9.12975 13.8534 8.8199 13.8333 8.50839 13.8333H6.85639L6.06989 16.7686L8.3706 17.8415L9.40196 13.9924C9.41118 13.958 9.42264 13.9248 9.43615 13.8929Z"
-       fill="#000000" />
-     </g>
-    </svg>
-    <span>Promotions</span>
-   </a>
-   {{-- Brands --}}
-   <a class="button button--fill button--flexed button--primary @if ($active == 'brand') button--active @endif"
-    href="{{ route('all_brands') }}">
-    <svg>
-     <path
-      d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-     </path>
-     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-     <line x1="12" y1="22.08" x2="12" y2="12"></line>
-    </svg>
-    <span>Brands</span>
-   </a>
+
+
    {{-- vouchers --}}
    <a class="button button--fill button--flexed button--primary @if ($active == 'voucher') button--active @endif"
     href="{{ route('vouchers') }}">
@@ -136,8 +121,7 @@
     <span>Price List</span>
    </a>
    {{-- specifications --}}
-   <a
-    class="button button--fill button--flexed button--primary @if ($active == 'spec') button--active @endif"
+   <a class="button button--fill button--flexed button--primary @if ($active == 'spec') button--active @endif"
     href="{{ route('specs') }}">
     <svg>
      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -174,7 +158,7 @@
      <path d="M7 7l0 10" />
      <path d="M4 8l0 8" />
     </svg>
-    <span>Sessions</span>
+    <span>Store Sessions</span>
    </a>
    {{-- storesettings --}}
    <a
@@ -271,12 +255,24 @@
    class="button button--long button--flexed button--primary @if ($active == 'dashboard') button--secondary @endif"
    href="{{ route('dashboard') }}">
    <svg>
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+    <line x1="8" y1="21" x2="16" y2="21"></line>
+    <line x1="12" y1="17" x2="12" y2="21"></line>
    </svg>
    <span>Dashboard</span>
+  </a>
+  {{-- brands desktop --}}
+  <a
+   class="button button--long button--flexed button--primary @if ($active == 'brand') button--secondary @endif"
+   href="{{ route('all_brands') }}">
+   <svg>
+    <path
+     d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+    </path>
+    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+   </svg>
+   <span>Brands</span>
   </a>
   {{-- categories desktop --}}
   <a
@@ -296,43 +292,15 @@
    class="button button--long button--flexed button--primary @if ($active == 'product') button--secondary @endif"
    href="{{ route('all_products') }}">
    <svg>
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M3 21l18 0" />
-    <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
-    <path d="M5 21l0 -10.15" />
-    <path d="M19 21l0 -10.15" />
-    <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+    <rect x="1" y="3" width="15" height="13"></rect>
+    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+    <circle cx="18.5" cy="18.5" r="2.5"></circle>
    </svg>
    <span>Products</span>
   </a>
-  {{-- promotions desktop --}}
-  <a
-   class="button button--long button--flexed button--primary @if ($active == 'promotion') button--secondary @endif"
-   href="{{ route('all_promotions') }}">
-   <svg>
-    <g id="SVGRepo_bgCarrier" />
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-    <g id="SVGRepo_iconCarrier">
-     <path fill-rule="evenodd" clip-rule="evenodd"
-      d="M20.0848 16.9323C20.5298 12.6556 20.5298 8.34432 20.0848 4.06762C19.9261 2.54257 18.1678 1.77006 16.9372 2.68478L12.8336 5.73519C11.5831 6.6647 10.0665 7.16665 8.5084 7.16665H4.6792C3.98884 7.16665 3.4292 7.72629 3.4292 8.41664V12.5833C3.4292 13.2737 3.98884 13.8333 4.6792 13.8333H5.30348L4.45812 16.9882C4.36392 17.3398 4.53573 17.7082 4.86559 17.8621L8.54674 19.5787C8.74766 19.6724 8.97974 19.6724 9.18067 19.5787C9.3816 19.485 9.53078 19.3072 9.58815 19.093L10.8508 14.3806C10.8643 14.3306 10.8723 14.2803 10.8753 14.2305C11.5727 14.4714 12.2338 14.8189 12.8336 15.2648L16.9372 18.3152C18.1677 19.2299 19.9261 18.4574 20.0848 16.9323ZM18.5928 4.22285C19.0271 8.39634 19.0271 12.6036 18.5928 16.7771C18.5545 17.1457 18.1295 17.3324 17.8321 17.1114L13.7284 14.0609C12.2193 12.9391 10.3888 12.3333 8.50839 12.3333L4.9292 12.3333L4.9292 8.66665H8.5084C10.3888 8.66665 12.2193 8.06085 13.7284 6.93902L17.8321 3.88861C18.1295 3.66752 18.5545 3.85424 18.5928 4.22285ZM9.43615 13.8929C9.12975 13.8534 8.8199 13.8333 8.50839 13.8333H6.85639L6.06989 16.7686L8.3706 17.8415L9.40196 13.9924C9.41118 13.958 9.42264 13.9248 9.43615 13.8929Z"
-      fill="#000000" />
-    </g>
-   </svg>
-   <span>Promotions</span>
-  </a>
-  {{-- brands desktop --}}
-  <a
-   class="button button--long button--flexed button--primary @if ($active == 'brand') button--secondary @endif"
-   href="{{ route('all_brands') }}">
-   <svg>
-    <path
-     d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-    </path>
-    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-   </svg>
-   <span>Brands</span>
-  </a>
+
+
   {{-- vouchers desktop --}}
   <a
    class="button button--long button--flexed button--primary @if ($active == 'voucher') button--secondary @endif"
@@ -435,7 +403,7 @@
     <path d="M7 7l0 10" />
     <path d="M4 8l0 8" />
    </svg>
-   <span>Sessions</span>
+   <span>Store Sessions</span>
   </a>
   {{-- storesettings desktop --}}
   <a

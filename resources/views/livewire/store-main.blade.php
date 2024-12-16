@@ -1,82 +1,6 @@
 <div>
  <main>
-  <!---------------------- Slider Images --------------------->
-  @if (!$slideritems->isEmpty())
-   <div class="main-slider">
-    <div class="main-slider__wrapper">
-     @foreach ($slideritems as $item)
-      {{-- -- Modelul de schimb de imagini pe slider la rezolutie -- --}}
-      <a class="main-slider__slide"
-       href="{{ route('products', ['categorySlug' => $item->seo_id !== null && $item->seo_id !== '' ? $item->seo_id : $item->id]) }}"
-       draggable="false">
-       <picture>
-        @if ($item->media != null)
-         {{-- Default (Desktop) --}}
-         @if ($item->media->where('sequence', 2)->first() != null)
-          <source media="(min-width: 992px)" sizes="(min-width: 992px) 50vw"
-           srcset="/{{ $item->media->where('sequence', 2)->first()->path }}{{ $item->media->where('sequence', 2)->first()->name }}"
-           loading="eager" fetchpriority="high" height="{{ $item->media->where('sequence', 2)->first()->height }}"
-           width="{{ $item->media->where('sequence', 2)->first()->width }}">
-         @else
-          <source media="(min-width: 992px)" sizes="(min-width: 992px) 50vw" srcset="/images/store/default/default.webp"
-           loading="eager" fetchpriority="high">
-         @endif
-         {{-- Tablet Picture --}}
-         @if ($item->media->where('sequence', 3)->first() != null)
-          <source title="{{ $item->media->where('sequence', 3)->first()->name }}" media="(min-width: 576px)"
-           sizes="(min-width: 576px) 80vw"
-           srcset="/{{ $item->media->where('sequence', 3)->first()->path }}{{ $item->media->where('sequence', 3)->first()->name }}"
-           loading="eager" fetchpriority="high" height="{{ $item->media->where('sequence', 3)->first()->height }}"
-           width="{{ $item->media->where('sequence', 3)->first()->width }}">
-         @elseif ($item->media->where('sequence', 2)->first() != null)
-          <source title="{{ $item->media->where('sequence', 2)->first()->name }}" media="(min-width: 576px)"
-           sizes="(min-width: 576px) 80vw"
-           srcset="/{{ $item->media->where('sequence', 2)->first()->path }}{{ $item->media->where('sequence', 2)->first()->name }}"
-           loading="eager" fetchpriority="high" height="{{ $item->media->where('sequence', 2)->first()->height }}"
-           width="{{ $item->media->where('sequence', 2)->first()->width }}">
-         @else
-          <source title="Default image" media="(min-width: 576px)" sizes="(min-width: 576px) 80vw"
-           srcset="/images/store/default/default640.webp" loading="eager" fetchpriority="high">
-         @endif
-         {{-- Mobile Picture --}}
-         @if ($item->media->where('sequence', 4)->first() != null)
-          <img title="{{ $item->name }}" sizes="100vw" alt="{{ $item->name }}"
-           src="/{{ $item->media->where('sequence', 4)->first()->path }}{{ $item->media->where('sequence', 4)->first()->name }}"
-           loading="eager" fetchpriority="high" height="{{ $item->media->where('sequence', 4)->first()->height }}"
-           width="{{ $item->media->where('sequence', 4)->first()->width }}">
-         @elseif ($item->media->where('sequence', 3)->first() != null)
-          <img title="{{ $item->name }}" sizes="100vw" alt="{{ $item->name }}"
-           src="/{{ $item->media->where('sequence', 3)->first()->path }}{{ $item->media->where('sequence', 3)->first()->name }}"
-           loading="eager" fetchpriority="high" height="{{ $item->media->where('sequence', 3)->first()->height }}"
-           width="{{ $item->media->where('sequence', 3)->first()->width }}">
-         @elseif ($item->media->where('sequence', 2)->first() != null)
-          <img title="{{ $item->name }}" sizes="100vw" alt="{{ $item->name }}"
-           src="/{{ $item->media->where('sequence', 2)->first()->path }}{{ $item->media->where('sequence', 2)->first()->name }}"
-           loading="eager" fetchpriority="high" height="{{ $item->media->where('sequence', 2)->first()->height }}"
-           width="{{ $item->media->where('sequence', 2)->first()->width }}">
-         @else
-          <img title="Default image" src="/images/store/default/default300.webp" alt="something wrong">
-         @endif
-        @else
-         <img title="Default image" src="/images/store/default/default300.webp" alt="something wrong">
-        @endif
-       </picture>
-      </a>
-     @endforeach
-    </div>
 
-    <button class="main-slider__button prev" aria-label="Previous main slider">
-     <svg>
-      <polyline points="15 18 9 12 15 6"></polyline>
-     </svg>
-    </button>
-    <button class="main-slider__button next" aria-label="Next main slider">
-     <svg>
-      <polyline points="9 18 15 12 9 6"></polyline>
-     </svg>
-    </button>
-   </div>
-  @endif
 
   @php
    if (app()->has('global_numberformat_element')) {
@@ -141,7 +65,7 @@
         <?php
         $price = null;
         $discount = false;
-        
+
         if ($product->product_prices->count() != 0) {
             $price = number_format($product->product_prices->first()->value, 2, $decimal, $mill);
             $discount = $product->product_prices->first()->discount != 0 ? true : false;
@@ -312,7 +236,7 @@
         <?php
         $price = null;
         $discount = false;
-        
+
         if ($product->product_prices->count() != 0) {
             $price = number_format($product->product_prices->first()->value, 2, $decimal, $mill);
             $discount = $product->product_prices->first()->discount != 0 ? true : false;

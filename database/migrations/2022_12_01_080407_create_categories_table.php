@@ -32,9 +32,7 @@ return new class extends Migration
       $table->string('short_description')->nullable();
       $table->string('meta_description')->nullable();
       $table->integer('sequence')->nullable();
-      $table->integer('slider_sequence')->nullable()->default(
-        '0'
-      );
+
       $table->string('start_date')->nullable();
       $table->string('end_date')->nullable();
       $table->boolean('store_tab');
