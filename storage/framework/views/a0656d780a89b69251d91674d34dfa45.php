@@ -10,7 +10,9 @@
    </svg>
   </button>
   <!-- Logo-->
-  
+  <a href="<?php echo e(route('dashboard')); ?>" class="logo display--desktop">
+   
+  </a>
   <button class="button button--primary button--centered" tooltip="Open Searchbar" tooltip-bottom
    onclick="focusTo('search__input')" id="search__open">
    <svg>

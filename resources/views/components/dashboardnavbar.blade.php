@@ -10,9 +10,9 @@
    </svg>
   </button>
   <!-- Logo-->
-  {{-- <a href="{{ route('dashboard') }}" class="logo display--desktop">
-   <img src="/images/dashboard/navbar/logo.png" alt="logo">
-  </a> --}}
+  <a href="{{ route('dashboard') }}" class="logo display--desktop">
+   {{-- <img src="/images/dashboard/navbar/logo.png" alt="logo"> --}}
+  </a>
   <button class="button button--primary button--centered" tooltip="Open Searchbar" tooltip-bottom
    onclick="focusTo('search__input')" id="search__open">
    <svg>
