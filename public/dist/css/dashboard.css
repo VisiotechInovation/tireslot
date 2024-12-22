@@ -1933,6 +1933,7 @@ nav.nav--home {
   transition: all 0.25s ease-in-out;
   overflow-y: auto;
   padding-bottom: 75px;
+  border: 1px solid #ffd500;
 }
 .aside h3 {
   color: #ffd500;

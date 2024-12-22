@@ -260,6 +260,9 @@
       </div>
      </th>
      @foreach ($selectedColumns as $index => $column)
+      @if ($column === 'long_description' || $column === 'short_description' || $column === 'meta_description')
+       <?php continue; ?>
+      @endif
       @if ($this->showColumn($column))
        <th @if ($index > count($selectedColumns) - 17) class="hidden" @endif>
         <button wire:click="sortBy('{{ $column }}')"
@@ -301,6 +304,9 @@
         </div>
        </td>
        @foreach ($selectedColumns as $index => $column)
+        @if ($column === 'long_description' || $column === 'short_description' || $column === 'meta_description')
+         <?php continue; ?>
+        @endif
         <td @if ($index > count($selectedColumns) - 17) class="hidden" @endif data-title="{{ $column }}"
          wire:click="expandRow({{ $nr }})">
          @if ($column === 'name')
@@ -322,14 +328,6 @@
             <label for="disabled2"></label>
            </div>
           @endif
-         @elseif ($column === 'long_description')
-          <span class="show-less">
-           {!! $category->$column !!}
-          </span>
-         @elseif ($column === 'short_description')
-          <span class="show-less">
-           {!! $category->$column !!}
-          </span>
          @elseif ($column === 'seo_id')
           <span class="show-less">
            {!! $category->$column !!}

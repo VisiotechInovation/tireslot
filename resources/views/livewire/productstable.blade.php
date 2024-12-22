@@ -335,6 +335,13 @@
       </div>
      </th>
      @foreach ($selectedColumns as $index => $column)
+      @if (
+          $column === 'long_description' ||
+              $column === 'comments' ||
+              $column === 'short_description' ||
+              $column === 'meta_description')
+       <?php continue; ?>
+      @endif
       @if ($this->showColumn($column))
        <th @if ($index > count($selectedColumns) - 19) class="hidden" @endif>
         <button wire:click="sortBy('{{ $column }}')"
@@ -367,6 +374,13 @@
       $i = 0;
      @endphp
      @foreach ($products as $nr => $product)
+      @if (
+          $column === 'long_description' ||
+              $column === 'comments' ||
+              $column === 'short_description' ||
+              $column === 'meta_description')
+       <?php continue; ?>
+      @endif
       <tr @if ($loop->last) id="last_record" @endif
        class="expandable-row @if ($this->isChecked($product->id)) active @endif">
        <td style="border-left: none" data-title="Check">
@@ -398,22 +412,6 @@
             <label for="disabled2"></label>
            </div>
           @endif
-         @elseif($column === 'long_description')
-          <span class="show-less">
-           {!! $product->$column !!}
-          </span>
-         @elseif($column === 'comments')
-          <span class="show-less">
-           {!! $product->$column !!}
-          </span>
-         @elseif($column === 'short_description')
-          <span class="show-less">
-           {!! $product->$column !!}
-          </span>
-         @elseif($column === 'meta_description')
-          <span class="show-less">
-           {!! $product->$column !!}
-          </span>
          @elseif($column === 'seo_id')
           <span class="show-less">
            {!! $product->$column !!}

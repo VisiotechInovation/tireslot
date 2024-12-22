@@ -281,6 +281,9 @@
       </div>
      </th>
      <?php $__currentLoopData = $selectedColumns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php if($column === 'long_description' || $column === 'short_description' || $column === 'meta_description'): ?>
+       <?php continue; ?>
+      <?php endif; ?>
       <?php if($this->showColumn($column)): ?>
        <th <?php if($index > count($selectedColumns) - 17): ?> class="hidden" <?php endif; ?>>
         <button wire:click="sortBy('<?php echo e($column); ?>')"
@@ -323,6 +326,9 @@
         </div>
        </td>
        <?php $__currentLoopData = $selectedColumns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php if($column === 'long_description' || $column === 'short_description' || $column === 'meta_description'): ?>
+         <?php continue; ?>
+        <?php endif; ?>
         <td <?php if($index > count($selectedColumns) - 17): ?> class="hidden" <?php endif; ?> data-title="<?php echo e($column); ?>"
          wire:click="expandRow(<?php echo e($nr); ?>)">
          <?php if($column === 'name'): ?>
@@ -344,16 +350,6 @@
             <label for="disabled2"></label>
            </div>
           <?php endif; ?>
-         <?php elseif($column === 'long_description'): ?>
-          <span class="show-less">
-           <?php echo $category->$column; ?>
-
-          </span>
-         <?php elseif($column === 'short_description'): ?>
-          <span class="show-less">
-           <?php echo $category->$column; ?>
-
-          </span>
          <?php elseif($column === 'seo_id'): ?>
           <span class="show-less">
            <?php echo $category->$column; ?>
