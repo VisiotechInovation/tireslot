@@ -37,7 +37,7 @@
    <!-------------------------Logo------------------------->
 
    <a class="logo" href="<?php echo e(url('/')); ?>">
-    <img title="<?php echo e(app('global_site_name')); ?> logo" loading="eager" src="/images/store/svg/logo-dark.svg" alt="Logo">
+    
    </a>
    <!---------------------NavMenu bar---------------------->
    <nav class="navbar__list">
@@ -278,8 +278,8 @@ echo $html;
        </div>
        <ul class="dropmenu__list">
         <?php $__currentLoopData = $category->subcategory->sortBy(function ($subcategory) {
-          return $subcategory->category->sequence;
-      }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        return $subcategory->category->sequence;
+    }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
          <li class="submenu">
           <div class="submenu__button">
            <a class="submenu__button--link"
@@ -302,8 +302,8 @@ echo $html;
           <?php if($subcategory->category->subcategory->count() != 0): ?>
            <div class="submenu__list">
             <?php $__currentLoopData = $category->subcategory->sortBy(function ($subcategory) {
-              return $subcategory->category->sequence;
-          }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        return $subcategory->category->sequence;
+    }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
              <a class="submenu__link"
               href="<?php echo e(route('products', ['categorySlug' => $subsubCategory->category->seo_id !== null && $subsubCategory->category->seo_id !== '' ? $subsubCategory->category->seo_id : $subsubCategory->category->id])); ?>">
               <?php if($subsubCategory->category->media->where('type', 'min')->first() != null): ?>

@@ -41,8 +41,6 @@
     <?php endif; ?>
    </span>
   <?php else: ?>
-   <?php echo e($timer); ?>
-
    <ul class="leftbar__list">
     <?php
     $isdisabled = false;
@@ -53,7 +51,7 @@
      <?php
      $disabled[$index] = false;
      $nonquantity[$index] = false;
-     
+
      if ($cartItem->product->active != true || $cartItem->product->start_date > now()->format('Y-m-d') || ($cartItem->product->end_date < now()->format('Y-m-d') || ($cartItem->product->quantity < 0 && (app()->has('global_preorder') && app('global_preorder') != 'true')))) {
          $disabled[$index] = true;
          $isdisabled = true;
@@ -62,7 +60,7 @@
          $disabled[$index] = true;
          $isdisabled = true;
      }
-     
+
      if ($cartItem->product->quantity > 0 && $cartItem->product->quantity < $cartItem->quantity && (app()->has('global_preorder') && app('global_preorder') != 'true')) {
          $nonquantity[$index] = true;
          $isdisabled = true;

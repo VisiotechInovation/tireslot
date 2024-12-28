@@ -180,10 +180,7 @@
   <div class="footer__container container">
    <!---------------------Logo and Social--------------------->
    <div class="footer__top">
-    <a class="logo" href="<?php echo e(url('/')); ?>">
-     <img title="<?php echo e(app('global_site_name')); ?> logo" loading="eager" src="/images/store/svg/logo-light.svg"
-      alt="logo">
-    </a>
+
     <div class="social__list">
      <?php if(app()->has('global_instagram_url') && app('global_instagram_url') != ''): ?>
       <a href="<?php echo e(app('global_instagram_url')); ?>" target="_blank" class="social__item"

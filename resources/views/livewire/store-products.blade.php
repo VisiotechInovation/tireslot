@@ -553,7 +553,7 @@
   </div>
  </div>
  <!---------------------- Support Center -------------------->
- <x-support />
+
  <script>
   document.addEventListener("livewire:load", function() {
    injectJsonLd();

@@ -1,7 +1,5 @@
 <div>
  <main>
-
-
   @php
    if (app()->has('global_numberformat_element')) {
        if (app('global_numberformat_element') === '.') {
@@ -16,171 +14,6 @@
        $decimal = ',';
    }
   @endphp
-  {{-- sliders --}}
-  @if ($popproducts->isNotEmpty())
-
-   <section>
-    <div class="section__header container">
-     <h1 class="section__title">
-      @if (app()->has('label_mainpage_popproducts_slider_title'))
-       {!! app('label_mainpage_popproducts_slider_title') !!}
-      @endif
-     </h1>
-     <p class="section__text">
-      @if (app()->has('label_mainpage_popproducts_slider_description'))
-       {!! app('label_mainpage_popproducts_slider_description') !!}
-      @endif
-     </p>
-    </div>
-   </section>
-   <!----------------- End Section Description ---------------->
-
-   <section>
-    <div class="card-slider container new-slider">
-     <div class="card-slider__wrapper new-slider__wrapper">
-      @foreach ($popproducts as $product)
-       <div class="card-slider__slide new-slider__slide card" data-product-jsonld="products-{{ $loop->index }}">
-        <a draggable="false"
-         href="{{ route('product', ['product' => $product->seo_id !== null && $product->seo_id !== '' ? $product->seo_id : $product->id]) }}">
-         @php
-          $mainMedia = $product->media->firstWhere('type', 'main');
-         @endphp
-         @if ($mainMedia)
-          <img title="{{ $product->name }}" loading="eager" class="card-image"
-           src="/{{ $mainMedia->path }}{{ $mainMedia->name }}" alt="{{ $product->name }}">
-         @else
-          <img title="Default image" loading="eager" class="card-image" src="/images/store/default/default300.webp"
-           alt="something wrong">
-         @endif
-        </a>
-        <?php
-        $price = null;
-        $discount = false;
-
-        if ($product->product_prices->count() != 0) {
-            $price = number_format($product->product_prices->first()->value, 2, $decimal, $mill);
-            $discount = $product->product_prices->first()->discount != 0 ? true : false;
-        }
-        ?>
-
-        @if ($price)
-         @if ($product->quantity < app('global_low_stock') && $product->quantity > 0)
-          <p class="card-status save">
-           @if (app()->has('label_product_status_stock'))
-            {!! app('label_product_status_stock') !!}
-           @endif
-          </p>
-          @if ($discount)
-           <p class="card-status save-secondary">
-            -{{ $product->product_prices->first()->discount }}%
-           </p>
-          @endif
-         @elseif($product->quantity <= 0 && (app()->has('global_preorder') && app('global_preorder') != 'true'))
-          <p class="card-status out">
-           @if (app()->has('label_product_status_indisponible'))
-            {!! app('label_product_status_indisponible') !!}
-           @endif
-          </p>
-         @else
-          @if ($discount)
-           <p class="card-status save">
-            -{{ $product->product_prices->first()->discount }}%
-           </p>
-          @endif
-         @endif
-         {{-- tagul de discount --}}
-        @else
-         <p class="card-status save">
-          @if (app()->has('label_product_status_coming_soon'))
-           {!! app('label_product_status_coming_soon') !!}
-          @endif
-         </p>
-        @endif
-        <div class="card-info">
-         <div class="card-text">
-          <h2 class="card-title"><a style="text-decoration: none; font-weight:500"
-            href="{{ route('product', ['product' => $product->seo_id !== null && $product->seo_id !== '' ? $product->seo_id : $product->id]) }}">{{ $product->name }}</a>
-          </h2>
-
-          @php
-           if (app()->has('global_cache_data') && app('global_cache_data') === 'true') {
-               $primaryCategory = $product->product_categories->where('primary_category', true)->first();
-           } else {
-               $primaryCategory = $product->product_categories->first();
-           }
-          @endphp
-
-          @if ($primaryCategory && $primaryCategory->category)
-           <a class="categorylink"
-            href="{{ route('products', ['categorySlug' => $primaryCategory->category->seo_id !== null && $primaryCategory->category->seo_id !== '' ? $primaryCategory->category->seo_id : $primaryCategory->category->id]) }}">
-            {{ $primaryCategory->category->short_description }}
-           </a>
-          @endif
-          <p class="card-price">
-           @if ($discount)
-            <span class="card-price discount">
-             @if ($product->product_prices->first())
-              {{ $price }}
-              @if (app()->has('global_currency_primary_symbol'))
-               {!! app('global_currency_primary_symbol') !!}
-              @endif
-             @endif
-            </span>
-            <span class="card-price oldprice">
-             {{ number_format($product->product_prices->first()->value_no_discount, 2, $decimal, $mill) }}
-             @if (app()->has('global_currency_primary_symbol'))
-              {!! app('global_currency_primary_symbol') !!}
-             @endif
-            </span>
-           @else
-            <span>
-             @if ($product->product_prices->first())
-              {{ $price }}
-              @if (app()->has('global_currency_primary_symbol'))
-               {!! app('global_currency_primary_symbol') !!}
-              @endif
-             @endif
-            </span>
-           @endif
-          </p>
-         </div>
-         @if ($price)
-          @livewire('add-to-cart-button', ['product' => $product], key('pop' . $product->id))
-         @else
-          <button class="card-button-disabled" aria-label="Disabled Add to cart button">
-           @if (app()->has('label_add_to_cart_button_indisponibil'))
-            {!! app('label_add_to_cart_button_indisponibil') !!}
-           @endif
-          </button>
-         @endif
-         <div style="display: none" class="dlv">
-          <span class="dlv_name"> {{ $product->name }}</span>
-          <span class="dlv_price">{{ $price }}</span>
-          <span class="dlv_currency">
-           @if (app()->has('global_currency_primary_name'))
-            {!! app('global_currency_primary_name') !!}
-           @endif
-          </span>
-         </div>
-        </div>
-        <div style="display: none" class="json-ld-data" data-product-json='@json($product)'></div>
-       </div>
-      @endforeach
-     </div>
-     <button class="card-slider__button new-slider__button prev" aria-label="Previous card slider button">
-      <svg>
-       <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-     </button>
-     <button class="card-slider__button new-slider__button next" aria-label="Next card slider button">
-      <svg>
-       <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-     </button>
-    </div>
-   </section>
-  @endif
-
   @if ($newproducts->isNotEmpty())
    <section>
     <div class="section__header container">
@@ -200,8 +33,7 @@
     <div class="card-slider container popular-slider">
      <div class="card-slider__wrapper popular-slider__wrapper">
       @foreach ($newproducts as $product)
-       <div class="card-slider__slide popular-slider__slide card"
-        data-product-jsonld="newproducts-{{ $loop->index }}">
+       <div class="card-slider__slide popular-slider__slide card" data-product-jsonld="newproducts-{{ $loop->index }}">
         <a draggable="false"
          href="{{ route('product', ['product' => $product->seo_id !== null && $product->seo_id !== '' ? $product->seo_id : $product->id]) }}">
          @php
@@ -342,9 +174,6 @@
     </div>
    </section>
   @endif
-
-  <!---------------------- Support Center -------------------->
-  <x-support />
  </main>
  <script>
   document.addEventListener("livewire:load", function() {

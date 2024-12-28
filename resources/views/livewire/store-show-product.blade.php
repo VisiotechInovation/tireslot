@@ -154,7 +154,7 @@
   <!------------------ End Modal Product ---------------->
   <!------------------------------------------------------>
   <!----------------------- Product details ---------------------->
-  @livewire('product-details', ['product' => $product, 'wishlistItems' => $wishlistItems])
+  @livewire('product-details', ['product' => $product])
   <!--------------------- End Product details -------------------->
   <!------------------------------------------------------>
  </section>
@@ -581,7 +581,7 @@
   </section>
  @endif
  <!---------------------- Support Center -------------------->
- <x-support />
+
  <script>
   document.addEventListener("livewire:load", function() {
    injectJsonLd();

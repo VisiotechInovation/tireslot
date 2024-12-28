@@ -93,7 +93,6 @@ class ProductDetails extends Component
     }
 
     $this->quantity = 1;
-    $this->is_in_wishlist = in_array($prodid, $this->wishlistItems);
   }
 
 

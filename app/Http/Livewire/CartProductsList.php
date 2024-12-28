@@ -43,7 +43,7 @@ class CartProductsList extends Component
 
       $cachedProducts = app()->make('cached_products')->keyBy('id');
 
-      $cart = Cart::select('id', 'quantity_amount', 'delivery_price', 'sum_amount', 'voucher_id', 'final_amount', 'voucher_value', 'promotion_value')
+      $cart = Cart::select('id', 'quantity_amount', 'delivery_price', 'sum_amount', 'voucher_id', 'final_amount', 'voucher_value')
         ->where('session_id', $this->session_id)
         ->where('status_id', '!=', app('global_cart_closed'))
         ->with([
@@ -67,7 +67,7 @@ class CartProductsList extends Component
 
       return $cart;
     } else {
-      return Cart::select('id', 'quantity_amount', 'delivery_price', 'sum_amount', 'voucher_id', 'final_amount', 'voucher_value', 'promotion_value')
+      return Cart::select('id', 'quantity_amount', 'delivery_price', 'sum_amount', 'voucher_id', 'final_amount', 'voucher_value')
         ->where('session_id', $this->session_id)
         ->where('status_id', '!=', app('global_cart_closed'))
         ->with([

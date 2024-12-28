@@ -17,7 +17,7 @@
    <!-------------------------Logo------------------------->
 
    <a class="logo" href="{{ url('/') }}">
-    <img title="{{ app('global_site_name') }} logo" loading="eager" src="/images/store/svg/logo-dark.svg" alt="Logo">
+    {{-- <img title="{{ app('global_site_name') }} logo" loading="eager" src="/images/store/svg/logo-dark.svg" alt="Logo"> --}}
    </a>
    <!---------------------NavMenu bar---------------------->
    <nav class="navbar__list">
@@ -183,8 +183,8 @@
        </div>
        <ul class="dropmenu__list">
         @foreach ($category->subcategory->sortBy(function ($subcategory) {
-          return $subcategory->category->sequence;
-      }) as $subcategory)
+        return $subcategory->category->sequence;
+    }) as $subcategory)
          <li class="submenu">
           <div class="submenu__button">
            <a class="submenu__button--link"
@@ -207,8 +207,8 @@
           @if ($subcategory->category->subcategory->count() != 0)
            <div class="submenu__list">
             @foreach ($category->subcategory->sortBy(function ($subcategory) {
-              return $subcategory->category->sequence;
-          }) as $subcategory)
+        return $subcategory->category->sequence;
+    }) as $subcategory)
              <a class="submenu__link"
               href="{{ route('products', ['categorySlug' => $subsubCategory->category->seo_id !== null && $subsubCategory->category->seo_id !== '' ? $subsubCategory->category->seo_id : $subsubCategory->category->id]) }}">
               @if ($subsubCategory->category->media->where('type', 'min')->first() != null)

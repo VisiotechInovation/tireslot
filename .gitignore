@@ -1,4 +1,6 @@
+vendor
 public/media/
+public/invoices/
 node_modules
 public/dist/css/main.css.map
 public/dist/css/loading-screen.css.map
@@ -8,6 +10,9 @@ public/robots.txt
 storage/
 bootstrap
 .env
+.htpasswd
+.DS_Store
+.github/
 .vscode
 .DS_Store
 resources/views/store/404.blade.php
