@@ -1,18 +1,5 @@
 <div>
  <section id="cookie-banner" style="display: none">
-  <?php if($timer > 0): ?>
-   <div class="container cookie__container" style="margin-top: 200px !important; margin-bottom: 200px">
-    <div class="cookie__description">
-     <span>
-      <?php if(app()->has('label_promotion_counter_title')): ?>
-       <?php echo app('label_promotion_counter_title'); ?>
-
-      <?php endif; ?>
-     </span>
-     <span id="countdown" style="font-size: 30px;"></span>
-    </div>
-   </div>
-  <?php endif; ?>
   <div class="container cookie__container">
 
    <div class="cookie__description">
@@ -98,61 +85,6 @@
 
 
  </section>
- <?php if($timer > 0): ?>
-  <script>
-   const cooldownPeriod = <?php echo e($timer); ?>; // Cooldown period in seconds from the server
-   let ticker;
-
-   function startTimer(endTime) {
-    ticker = setInterval(() => tick(endTime), 1000);
-   }
-
-   function tick(endTime) {
-    const now = Math.floor(Date.now() / 1000);
-
-    let timeLeft = Math.max(endTime - now, 0);
-
-    if (timeLeft > 0) {
-     const days = Math.floor(timeLeft / 86400);
-     timeLeft %= 86400;
-     const hours = Math.floor(timeLeft / 3600);
-     timeLeft %= 3600;
-     const mins = Math.floor(timeLeft / 60);
-     const secs = timeLeft % 60;
-
-     let pretty = "";
-     if (days > 0) pretty += days + "d ";
-     if (hours > 0 || days > 0) pretty += hours + "h ";
-     if (mins > 0 || hours > 0 || days > 0) pretty += mins + "m ";
-     pretty += secs + "s";
-
-     document.getElementById("countdown").innerHTML = pretty;
-    } else {
-     clearInterval(ticker);
-     document.getElementById("countdown").innerHTML = "0s";
-     window.livewire.find('<?php echo e($_instance->id); ?>').call('timmerexpired');
-
-    }
-   }
-
-   function initTimer() {
-    const now = Math.floor(Date.now() / 1000);
-
-    const endTime = now + cooldownPeriod;
-
-    if (cooldownPeriod > 0) {
-     startTimer(endTime);
-    } else {
-     document.getElementById("countdown").innerHTML = "0s";
-     window.livewire.find('<?php echo e($_instance->id); ?>').call('timmerexpired');
-    }
-   }
-
-   initTimer();
-  </script>
- <?php endif; ?>
-
-
 
  <?php if (isset($component)) { $__componentOriginale771b02edc5b6979c77c5ae631ccbd2a = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginale771b02edc5b6979c77c5ae631ccbd2a = $attributes; } ?>
@@ -232,24 +164,6 @@
      </button>
 
     </form>
-   </div>
-   <!-----------------------Quick Links----------------------->
-   <div class="footer__bottom">
-    <div class="footer__list">
-     <h3 class="footer__title">Serviciu clienți</h3>
-     <a class="footer__link" href="<?php echo e(url('/cookie')); ?>">Politica de Cookies</a>
-     <a class="footer__link" href="<?php echo e(url('/faq')); ?>">Întrebări Frecvente</a>
-     <a class="footer__link" href="<?php echo e(url('/privacy')); ?>">Politica de confidențialitate</a>
-     <a class="footer__link" href="<?php echo e(url('/sitemap.xml')); ?>">Hartă Site</a>
-     <a class="footer__link" target="blank" href="https://anpc.ro/">ANPC</a>
-
-    </div>
-    <div class="footer__list">
-     <h3 class="footer__title">Informații</h3>
-     <a class="footer__link" href="<?php echo e(url('/terms')); ?>">Termeni și Condiții</a>
-     <a class="footer__link" href="<?php echo e(url('/contact')); ?>">Contactează-ne</a>
-     <a class="footer__link" href="<?php echo e(url('/about')); ?>">Despre Noi</a>
-    </div>
    </div>
    <!------------------------Copyright------------------------>
    <span class="footer__copyright">

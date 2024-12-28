@@ -4275,6 +4275,9 @@ h2.section__title {
   font-weight: 500;
   text-align: center;
   padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footer {
@@ -4538,9 +4541,8 @@ header {
   width: 50%;
   display: flex;
   max-width: 200px;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 @media (min-width: 1200px) {
   .header__buttons > .head__button__right {
@@ -4560,7 +4562,7 @@ header {
   position: relative;
 }
 .header__btn > svg {
-  stroke: #050304;
+  stroke: #c8c8c8;
 }
 
 .header__count {

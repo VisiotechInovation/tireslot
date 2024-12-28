@@ -21,95 +21,10 @@
 <?php endif; ?>
 
  <!--------------------Banner(Header Top)-------------------->
- <?php if(app()->has('global_header_top_text') && app('global_header_top_text') != ''): ?>
-  <div class="banner">
-   <div class="banner__container container">
-    <p>
-     <?php echo app('global_header_top_text'); ?>
-
-    </p>
-   </div>
-  </div>
- <?php endif; ?>
- <!--------------------------Header-------------------------->
- <header>
-  <div class="header__container container">
-   <!-------------------------Logo------------------------->
-
+ <div class="banner">
+  <div class="banner__container container">
    <a class="logo" href="<?php echo e(url('/')); ?>">
-    
    </a>
-   <!---------------------NavMenu bar---------------------->
-   <nav class="navbar__list">
-    <ul class="navbar__list">
-     <?php if(app()->has('global_show_on_header') && app('global_show_on_header') == 'true'): ?>
-      <li>
-       <a class="navbar__link" href="<?php echo e(route('products', ['categorySlug' => app('global_default_category')])); ?>">
-        <?php if(app()->has('label_header_allproducts')): ?>
-         <?php echo app('label_header_allproducts'); ?>
-
-        <?php endif; ?>
-       </a>
-      </li>
-     <?php endif; ?>
-     <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-      <?php if($category->subcategory->count() != 0): ?>
-       <li>
-        <div class="dropdown">
-         <a class="dropdown__button"
-          href="<?php echo e(route('products', ['categorySlug' => $category->seo_id !== null && $category->seo_id !== '' ? $category->seo_id : $category->id])); ?>">
-          <?php echo $category->name; ?>
-
-          <svg>
-           <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-         </a>
-         <ul class="dropdown__list">
-          <?php $__currentLoopData = $category->subcategory->sortBy(function ($subcategory) {
-        return $subcategory->category->sequence;
-    }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-           <li class="dropdown__item">
-            <a class="dropdown__item--button"
-             href="<?php echo e(route('products', ['categorySlug' => $subcategory->category->seo_id !== null && $subcategory->category->seo_id !== '' ? $subcategory->category->seo_id : $subcategory->category->id])); ?>">
-             <?php echo $subcategory->category->name; ?>
-
-             <?php if($subcategory->category->subcategory->count() != 0): ?>
-              <svg>
-               <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-             <?php endif; ?>
-            </a>
-            <?php if($subcategory->category->subcategory->count() != 0): ?>
-             <div class="dropdown__item--list">
-              <?php $__currentLoopData = $subcategory->category->subcategory->sortBy(function ($subsubCategory) {
-        return $subsubCategory->category->sequence;
-    }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subsubCategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               <a class="dropdown__item--link"
-                href="<?php echo e(route('products', ['categorySlug' => $subsubCategory->category->seo_id !== null && $subsubCategory->category->seo_id !== '' ? $subsubCategory->category->seo_id : $subsubCategory->category->id])); ?>">
-                <?php echo $subsubCategory->category->name; ?>
-
-               </a>
-              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-             </div>
-            <?php endif; ?>
-           </li>
-          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-         </ul>
-        </div>
-       </li>
-      <?php else: ?>
-       <li>
-        <a class="navbar__link"
-         href="<?php echo e(route('products', ['categorySlug' => $category->seo_id !== null && $category->seo_id !== '' ? $category->seo_id : $category->id])); ?>">
-         <?php echo $category->name; ?>
-
-        </a>
-       </li>
-      <?php endif; ?>
-     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </ul>
-   </nav>
-   <!---------------------Right-Buttons--------------------->
    <div class="header__buttons">
     <div class="head__button__left">
      <button class="header__btn" id="menuOpen" aria-label="Open burger menu button">
@@ -120,8 +35,10 @@
       </svg>
      </button>
      <a class="logo__hidden" href="<?php echo e(url('/')); ?>">
-      <img title="<?php echo e(app('global_site_name')); ?> logo" loading="eager" src="/images/store/svg/logo-dark.svg"
-       alt="Logo">
+      <svg>
+       <circle cx="11" cy="11" r="8"></circle>
+       <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
      </a>
     </div>
     <div class="head__button__right">
@@ -194,6 +111,87 @@ echo $html;
      </button>
     </div>
    </div>
+  </div>
+ </div>
+ <!--------------------------Header-------------------------->
+ <header>
+  <div class="header__container container">
+   <!-------------------------Logo------------------------->
+
+   <a class="logo" href="<?php echo e(url('/')); ?>">
+   </a>
+   <!---------------------NavMenu bar---------------------->
+   <nav class="navbar__list">
+    <ul class="navbar__list">
+     <?php if(app()->has('global_show_on_header') && app('global_show_on_header') == 'true'): ?>
+      <li>
+       <a class="navbar__link" href="<?php echo e(route('products', ['categorySlug' => app('global_default_category')])); ?>">
+        <?php if(app()->has('label_header_allproducts')): ?>
+         <?php echo app('label_header_allproducts'); ?>
+
+        <?php endif; ?>
+       </a>
+      </li>
+     <?php endif; ?>
+     <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php if($category->subcategory->count() != 0): ?>
+       <li>
+        <div class="dropdown">
+         <a class="dropdown__button"
+          href="<?php echo e(route('products', ['categorySlug' => $category->seo_id !== null && $category->seo_id !== '' ? $category->seo_id : $category->id])); ?>">
+          <?php echo $category->name; ?>
+
+          <svg>
+           <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+         </a>
+         <ul class="dropdown__list">
+          <?php $__currentLoopData = $category->subcategory->sortBy(function ($subcategory) {
+        return $subcategory->category->sequence;
+    }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subcategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+           <li class="dropdown__item">
+            <a class="dropdown__item--button"
+             href="<?php echo e(route('products', ['categorySlug' => $subcategory->category->seo_id !== null && $subcategory->category->seo_id !== '' ? $subcategory->category->seo_id : $subcategory->category->id])); ?>">
+             <?php echo $subcategory->category->name; ?>
+
+             <?php if($subcategory->category->subcategory->count() != 0): ?>
+              <svg>
+               <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+             <?php endif; ?>
+            </a>
+            <?php if($subcategory->category->subcategory->count() != 0): ?>
+             <div class="dropdown__item--list">
+              <?php $__currentLoopData = $subcategory->category->subcategory->sortBy(function ($subsubCategory) {
+        return $subsubCategory->category->sequence;
+    }); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subsubCategory): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+               <a class="dropdown__item--link"
+                href="<?php echo e(route('products', ['categorySlug' => $subsubCategory->category->seo_id !== null && $subsubCategory->category->seo_id !== '' ? $subsubCategory->category->seo_id : $subsubCategory->category->id])); ?>">
+                <?php echo $subsubCategory->category->name; ?>
+
+               </a>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+             </div>
+            <?php endif; ?>
+           </li>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+         </ul>
+        </div>
+       </li>
+      <?php else: ?>
+       <li>
+        <a class="navbar__link"
+         href="<?php echo e(route('products', ['categorySlug' => $category->seo_id !== null && $category->seo_id !== '' ? $category->seo_id : $category->id])); ?>">
+         <?php echo $category->name; ?>
+
+        </a>
+       </li>
+      <?php endif; ?>
+     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
+   </nav>
+   <!---------------------Right-Buttons--------------------->
+
   </div>
  </header>
  <!-------------------------Searchbar------------------------>
@@ -344,7 +342,6 @@ echo $html;
     <li class="menufooter__item"><a href="<?php echo e(url('/faq')); ?>">Întrebări Frecvente</a></li>
     <li class="menufooter__item"><a href="<?php echo e(url('/privacy')); ?>">Politica de confidențialitate</a></li>
     <li class="menufooter__item"><a href="<?php echo e(url('/sitemap.xml')); ?>">Hartă Site</a></li>
-    <li class="menufooter__item"><a target="blank" href="https://anpc.ro/">ANPC</a></li>
 
    </ul>
   </div>
