@@ -5,7 +5,7 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
- <title>Embianz</title>
+ <title><?php echo e(__('Tireslot Panel')); ?></title>
  <link rel="icon" type="image/x-icon" href="/favicon.png">
  <link rel="stylesheet" href="/dist/css/dashboard.css">
  
