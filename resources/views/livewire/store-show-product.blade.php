@@ -303,7 +303,6 @@
           src="/images/store/default/default300.webp" alt="something wrong">
         @endif
        </a>
-       @livewire('product-wishlist-button', ['productId' => $product->product->id, 'class' => 'card__action', 'is_in_wishlist' => $this->isInWishlist($product->product->id)], key($product->product->id))
        <?php if ($product->product->product_prices->count() != 0) {
            $price = number_format($product->product->product_prices->first()->value, 2, $decimal, $mill);
            $discount = $product->product->product_prices->first()->discount != 0 ? true : false;
@@ -466,7 +465,6 @@
          src="/images/store/default/default300.webp" alt="something wrong">
        @endif
       </a>
-      @livewire('product-wishlist-button', ['productId' => $product->id, 'class' => 'card__action', 'is_in_wishlist' => $this->isInWishlist($product->id)], key('lastw' . $product->id))
       <?php if ($product->product_prices->count() != 0) {
           $price = number_format($product->product_prices->first()->value, 2, $decimal, $mill);
           $discount = $product->product_prices->first()->discount != 0 ? true : false;

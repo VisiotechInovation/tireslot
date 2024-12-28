@@ -13,7 +13,6 @@ class StoreShowProduct extends Component
   public $productId;
   public $session_id;
   public $back = false;
-  public $wishlistItems;
   public $lastVisited;
 
 
@@ -29,7 +28,6 @@ class StoreShowProduct extends Component
     $this->productId = $productId;
     $this->session_id = request()->cookie('sessionId') ?? session()->getId();
 
-    $this->wishlistItems = Wishlist::where('session_id', $this->session_id)->pluck('product_id')->toArray();
 
     $this->lastVisited = json_decode(request()->cookie('last_visited_products', '[]'), true);
     if (($key = array_search($productId, $this->lastVisited)) !== false) {
@@ -71,12 +69,6 @@ class StoreShowProduct extends Component
     } else {
       return collect();
     }
-  }
-
-
-  public function isInWishlist($productId)
-  {
-    return in_array($productId, $this->wishlistItems);
   }
 
   public function getProductProperty()

@@ -56,31 +56,6 @@
          <?php endif; ?>
         </a>
         <?php
-if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('product-wishlist-button',
-            [
-                'productId' => $product->id,
-                'class' => 'card__action',
-                'is_in_wishlist' => $this->isInWishlist($product->id),
-            ])->html();
-} elseif ($_instance->childHasBeenRendered('popw' . $product->id)) {
-    $componentId = $_instance->getRenderedChildComponentId('popw' . $product->id);
-    $componentTag = $_instance->getRenderedChildComponentTagName('popw' . $product->id);
-    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('popw' . $product->id);
-} else {
-    $response = \Livewire\Livewire::mount('product-wishlist-button',
-            [
-                'productId' => $product->id,
-                'class' => 'card__action',
-                'is_in_wishlist' => $this->isInWishlist($product->id),
-            ]);
-    $html = $response->html();
-    $_instance->logRenderedChild('popw' . $product->id, $response->id(), \Livewire\Livewire::getRootElementTagName($html));
-}
-echo $html;
-?>
-        <?php
         $price = null;
         $discount = false;
 
@@ -270,31 +245,6 @@ echo $html;
            alt="something wrong">
          <?php endif; ?>
         </a>
-        <?php
-if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('product-wishlist-button',
-            [
-                'productId' => $product->id,
-                'class' => 'card__action',
-                'is_in_wishlist' => $this->isInWishlist($product->id),
-            ])->html();
-} elseif ($_instance->childHasBeenRendered('neww' . $product->id)) {
-    $componentId = $_instance->getRenderedChildComponentId('neww' . $product->id);
-    $componentTag = $_instance->getRenderedChildComponentTagName('neww' . $product->id);
-    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('neww' . $product->id);
-} else {
-    $response = \Livewire\Livewire::mount('product-wishlist-button',
-            [
-                'productId' => $product->id,
-                'class' => 'card__action',
-                'is_in_wishlist' => $this->isInWishlist($product->id),
-            ]);
-    $html = $response->html();
-    $_instance->logRenderedChild('neww' . $product->id, $response->id(), \Livewire\Livewire::getRootElementTagName($html));
-}
-echo $html;
-?>
         <?php
         $price = null;
         $discount = false;

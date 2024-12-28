@@ -746,6 +746,7 @@ class ComposerStaticInit491329d2579f123d2109ce0cb3c4272c
         'App\\Http\\Livewire\\RelatedPricelist' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedPricelist.php',
         'App\\Http\\Livewire\\RelatedProductCategory' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedProductCategory.php',
         'App\\Http\\Livewire\\RelatedProducts' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedProducts.php',
+        'App\\Http\\Livewire\\RelatedProductsBrands' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedProductsBrands.php',
         'App\\Http\\Livewire\\RelatedProductsonPricelist' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedProductsonPricelist.php',
         'App\\Http\\Livewire\\RelatedProductsonSpec' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedProductsonSpec.php',
         'App\\Http\\Livewire\\RelatedSession' => __DIR__ . '/../..' . '/app/Http/Livewire/RelatedSession.php',

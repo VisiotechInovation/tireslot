@@ -53,15 +53,6 @@
            alt="something wrong">
          @endif
         </a>
-        @livewire(
-            'product-wishlist-button',
-            [
-                'productId' => $product->id,
-                'class' => 'card__action',
-                'is_in_wishlist' => $this->isInWishlist($product->id),
-            ],
-            key('popw' . $product->id)
-        )
         <?php
         $price = null;
         $discount = false;
@@ -224,15 +215,6 @@
            alt="something wrong">
          @endif
         </a>
-        @livewire(
-            'product-wishlist-button',
-            [
-                'productId' => $product->id,
-                'class' => 'card__action',
-                'is_in_wishlist' => $this->isInWishlist($product->id),
-            ],
-            key('neww' . $product->id)
-        )
         <?php
         $price = null;
         $discount = false;

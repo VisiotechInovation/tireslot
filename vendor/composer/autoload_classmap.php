@@ -61,6 +61,7 @@ return array(
     'App\\Http\\Livewire\\RelatedPricelist' => $baseDir . '/app/Http/Livewire/RelatedPricelist.php',
     'App\\Http\\Livewire\\RelatedProductCategory' => $baseDir . '/app/Http/Livewire/RelatedProductCategory.php',
     'App\\Http\\Livewire\\RelatedProducts' => $baseDir . '/app/Http/Livewire/RelatedProducts.php',
+    'App\\Http\\Livewire\\RelatedProductsBrands' => $baseDir . '/app/Http/Livewire/RelatedProductsBrands.php',
     'App\\Http\\Livewire\\RelatedProductsonPricelist' => $baseDir . '/app/Http/Livewire/RelatedProductsonPricelist.php',
     'App\\Http\\Livewire\\RelatedProductsonSpec' => $baseDir . '/app/Http/Livewire/RelatedProductsonSpec.php',
     'App\\Http\\Livewire\\RelatedSession' => $baseDir . '/app/Http/Livewire/RelatedSession.php',

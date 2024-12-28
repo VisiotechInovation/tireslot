@@ -10,14 +10,6 @@ use App\Models\Wishlist;
 class StoreMain extends Component
 {
   public $session_id;
-  public $wishlistItems;
-
-
-
-  public function isInWishlist($productId)
-  {
-    return in_array($productId, $this->wishlistItems);
-  }
 
   public function getPopProductsProperty()
   {
@@ -109,6 +101,5 @@ class StoreMain extends Component
   public function mount()
   {
     $this->session_id = request()->cookie('sessionId') ?? session()->getId();
-    $this->wishlistItems = Wishlist::where('session_id', $this->session_id)->pluck('product_id')->toArray();
   }
 }
