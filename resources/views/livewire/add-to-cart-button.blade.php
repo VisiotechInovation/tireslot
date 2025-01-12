@@ -1,6 +1,6 @@
 <div class="card__button--wrapper">
  @if ($product->quantity > 0 && $product->product_prices())
-  <button class="card__button" onclick="flyToCart(this)" wire:click="addToCart({{ $product->id }})" wire:ignore="$refresh">
+  <button class="card__button" wire:click="addToCart({{ $product->id }})" wire:ignore="$refresh">
    <div class="card__button--cart">
     <svg>
      <circle cx="9" cy="21" r="1"></circle>
@@ -25,7 +25,7 @@
   </button>
  @else
   @if ($product->product_prices() && (app()->has('global_preorder') && app('global_preorder') === 'true'))
-   <button class="card__button" onclick="flyToCart(this)" wire:click="addToCart({{ $product->id }})"
+   <button class="card__button" wire:click="addToCart({{ $product->id }})"
     wire:ignore="$refresh">
     <div class="card__button--cart">
      <svg>
@@ -55,7 +55,6 @@
      {!! app('label_add_to_cart_button_indisponibil') !!}
     @endif
    </button>
-
   @endif
  @endif
 </div>

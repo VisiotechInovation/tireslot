@@ -4,8 +4,6 @@ namespace App\Http\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
-use App\Models\Category;
-use App\Models\Wishlist;
 
 class StoreMain extends Component
 {

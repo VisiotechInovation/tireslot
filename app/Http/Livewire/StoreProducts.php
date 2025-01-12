@@ -21,7 +21,6 @@ class StoreProducts extends Component
   public $selectedKeys = [];
   public $selectedvariantsKeys = [];
   public $selectedfilters = [];
-  public $wishlistItems;
 
   public function render()
   {
@@ -39,7 +38,6 @@ class StoreProducts extends Component
   public function mount($category = null)
   {
     $this->session_id = request()->cookie('sessionId') ?? session()->getId();
-    $this->wishlistItems = Wishlist::where('session_id', $this->session_id)->pluck('product_id')->toArray();
     if ($category) {
       $decodedCategory = json_decode(htmlspecialchars_decode($category), true);
       $this->category = Category::select('id', 'name', 'short_description', 'long_description', 'seo_id', 'accepted_items', 'display_variant_price')->find($decodedCategory['id']);

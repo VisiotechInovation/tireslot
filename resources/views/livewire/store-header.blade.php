@@ -15,12 +15,12 @@
        <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
      </button>
-     <a class="logo__hidden" href="{{ url('/') }}">
+     {{-- <a class="logo__hidden" href="{{ url('/') }}">
       <svg>
        <circle cx="11" cy="11" r="8"></circle>
        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
-     </a>
+     </a> --}}
     </div>
     <div class="head__button__right">
      {{-- search button --}}
@@ -43,16 +43,16 @@
 
 
      {{-- wislist button --}}
-     <button class="header__btn" wire:click="$emit('showwis')" id="wishOpen" aria-label="Open wishlist button">
+     <a class="header__btn" href="{{ route('wishlist') }}" id="wishOpen" aria-label="Open wishlist button">
       @livewire('wishlist-quantity')
       <svg>
        <path
         d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
        </path>
       </svg>
-     </button>
+     </a>
      {{-- cart button --}}
-     <button class="header__btn" wire:click="$emit('showcart')" id="basketOpen" aria-label="Open cart button">
+     <a class="header__btn" href="{{ route('cart') }}" id="basketOpen" aria-label="Open cart button">
       @if ($cart)
        @livewire('cart-quantity', ['cart' => $cart])
       @endif
@@ -61,7 +61,7 @@
        <line x1="3" y1="6" x2="21" y2="6"></line>
        <path d="M16 10a4 4 0 0 1-8 0"></path>
       </svg>
-     </button>
+     </a>
     </div>
    </div>
   </div>
@@ -71,7 +71,8 @@
   <div class="header__container container">
    <!-------------------------Logo------------------------->
 
-   <a class="logo" href="{{ url('/') }}">
+   <a class="logo" href="{{ url('/') }}" style="padding: 5px">
+    <img src="/images/store/logo.png" alt="logo">
    </a>
    <!---------------------NavMenu bar---------------------->
    <nav class="navbar__list">
@@ -136,6 +137,18 @@
        </li>
       @endif
      @endforeach
+     <li>
+        <a class="navbar__link"
+         href="/about">
+         About
+        </a>
+       </li>
+        <li>
+        <a class="navbar__link"
+         href="/contact">
+         Contact Us
+        </a>
+       </li>
     </ul>
    </nav>
    <!---------------------Right-Buttons--------------------->
@@ -144,10 +157,6 @@
  </header>
  <!-------------------------Searchbar------------------------>
  @livewire('general-search')
-
- @livewire('cart-products-list')
-
- @livewire('wishlist-products-list')
  <!----------------------Menu (Leftbar)---------------------->
  <nav class="menu" id="menuList">
   <div class="menu__content" id="menuContent">
@@ -239,15 +248,15 @@
      @endif
     @endforeach
     <li class="menufooter">Informații</li>
-    <li class="menufooter__item"><a href="{{ url('/about') }}">Despre Noi</a></li>
-    <li class="menufooter__item"><a href="{{ url('/contact') }}">Contactează-ne</a></li>
-    <li class="menufooter__item"><a href="{{ url('/terms') }}">Termeni și Condiții</a></li>
+    <li class="menufooter__item"><a href="{{ url('/about') }}">About us</a></li>
+    <li class="menufooter__item"><a href="{{ url('/contact') }}">Contact</a></li>
+    <li class="menufooter__item"><a href="{{ url('/terms') }}">Terms</a></li>
 
     <li class="menufooter">Serviciu clienți</li>
-    <li class="menufooter__item"><a href="{{ url('/cookie') }}">Politica de Cookies</a></li>
-    <li class="menufooter__item"><a href="{{ url('/faq') }}">Întrebări Frecvente</a></li>
-    <li class="menufooter__item"><a href="{{ url('/privacy') }}">Politica de confidențialitate</a></li>
-    <li class="menufooter__item"><a href="{{ url('/sitemap.xml') }}">Hartă Site</a></li>
+    <li class="menufooter__item"><a href="{{ url('/cookie') }}">Cookies</a></li>
+    <li class="menufooter__item"><a href="{{ url('/faq') }}">FAQ</a></li>
+    <li class="menufooter__item"><a href="{{ url('/privacy') }}">Privacy</a></li>
+    <li class="menufooter__item"><a href="{{ url('/sitemap.xml') }}">Site map</a></li>
 
    </ul>
   </div>

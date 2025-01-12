@@ -158,7 +158,7 @@
 
   route::get('/', [HomeController::class, 'home'])->name('home');
   route::view('/cart', 'store.cart')->name('cart');
-  route::view('/wishlist', 'store.wislist')->name('wislist');
+  route::view('/wishlist', 'store.wislist')->name('wishlist');
   route::view('/order', 'store.order')->name('order');
   route::view('/faq', 'store.faq')->name('faq');
   route::view('/cookie', 'store.cookie')->name('cookie');

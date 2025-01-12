@@ -191,16 +191,6 @@
         @endif
        </p>
       @endif
-      @livewire(
-          'product-wishlist-button',
-          [
-              'productId' => $element->id,
-              'class' => 'card__action',
-              'is_in_wishlist' => $this->isInWishlist($element->id),
-          ],
-          key('w' . $element->id)
-      )
-
       <div class="card-info">
        <div class="card-text">
         <h2 class="card-title"><a style="text-decoration: none; font-weight:500"

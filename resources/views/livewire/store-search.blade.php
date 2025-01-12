@@ -26,28 +26,6 @@
     {!! app('label_search_title') !!}
    @endif
   </h2>
-  <div>
-   <button class="tab__button tab__button--long @if ($showproducts) active @endif"
-    wire:click="toggle('products')">
-    @if (app()->has('label_search_product_element'))
-     {!! app('label_search_product_element') !!}
-     @endif @if ($products->isNotEmpty())
-      ({{ $products->total() }})
-     @else
-      (0)
-     @endif
-   </button>
-   <button class="tab__button tab__button--long @if ($showcategories) active @endif"
-    wire:click="toggle('categories')">
-    @if (app()->has('label_search_category_element'))
-     {!! app('label_search_category_element') !!}
-     @endif @if ($categories->isNotEmpty())
-      ({{ $categories->total() }})
-     @else
-      (0)
-     @endif
-   </button>
-  </div>
  </section>
  @php
   if (app()->has('global_numberformat_element')) {
@@ -63,7 +41,6 @@
       $decimal = ',';
   }
  @endphp
- @if ($showproducts)
   <section class="catalogue container">
    @if ($products->isEmpty())
     <p>
@@ -129,16 +106,6 @@
          @endif
         </p>
        @endif
-       @livewire(
-           'product-wishlist-button',
-           [
-               'productId' => $product->id,
-               'class' => 'card__action',
-               'is_in_wishlist' => $product->wishlists->isNotEmpty(),
-           ],
-           key($product->id)
-       )
-
        <div class="card-info">
         <div class="card-text">
          <h2 class="card-title"><a style="text-decoration: none; font-weight:500"
@@ -213,44 +180,11 @@
    @endif
   </section>
 
- @endif
 
- @if ($showcategories)
-  <section class="catalogue container catalogue--categories">
-   @if ($categories->isEmpty())
-    <p>
-     @if (app()->has('label_message_no_elements'))
-      {!! app('label_message_no_elements') !!}
-     @endif
-    </p>
-   @else
-    @foreach ($categories as $index => $category)
-     <div @if ($loop->last) id="last_record" @endif class="product">
-      <a class="card card--category" role="listitem"
-       href="{{ route('products', ['categorySlug' => $category->seo_id !== null && $category->seo_id !== '' ? $category->seo_id : $category->id]) }}">
-       <div>
-        @if ($category->media->first() != null)
-         <img title="{{ strip_tags($category->name) }}" loading="eager" class="card-image"
-          src="/{{ $category->media->first()->path }}{{ $category->media->first()->name }}"
-          alt="{{ strip_tags($category->name) }}">
-        @endif
-       </div>
-       <div class="card-info">
-        <div class="card-text">
-         <h3 class="card-title">{!! $category->name !!}</h2>
-        </div>
-        {!! $category->long_description !!}
-       </div>
-      </a>
-     </div>
-    @endforeach
-    <x-lazy />
-   @endif
-  </section>
- @endif
- @if ($products->count() > $loadAmount || $categories->count() > $loadAmount)
+
+ @if ($products->count() > $loadAmount)
   <section class="container">
-   <button class="filter__apply" wire:click="loadMore" wire:loading.remove>Vezi mai mult!</button>
+   <button class="filter__apply" wire:click="loadMore" wire:loading.remove>Load more</button>
   </section>
  @endif
 

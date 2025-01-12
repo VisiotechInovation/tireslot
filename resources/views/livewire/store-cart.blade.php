@@ -50,7 +50,7 @@
       <?php
       $disabled[$index] = false;
       $nonquantity[$index] = false;
-      
+
       if ($cartItem->product->active != true || $cartItem->product->start_date > now()->format('Y-m-d') || ($cartItem->product->end_date < now()->format('Y-m-d') || ($cartItem->product->quantity < 0 && (app()->has('global_preorder') && app('global_preorder') != 'true')))) {
           $disabled[$index] = true;
           $isdisabled = true;
@@ -59,12 +59,12 @@
           $disabled[$index] = true;
           $isdisabled = true;
       }
-      
+
       if ($cartItem->product->quantity > 0 && $cartItem->product->quantity < $cartItem->quantity && (app()->has('global_preorder') && app('global_preorder') != 'true')) {
           $nonquantity[$index] = true;
           $isdisabled = true;
       }
-      
+
       ?>
       <div class="basket__split">
        <div class="basket__item">
@@ -97,15 +97,6 @@
           @endif
          </div>
         </a>
-        @livewire(
-            'product-wishlist-button',
-            [
-                'productId' => $cartItem->product->id,
-                'class' => 'basket__action',
-                'is_in_wishlist' => $this->isInWishlist($cartItem->product->id),
-            ],
-            key($cartItem->product->id)
-        )
         <button class="basket__delete" aria-label="Remove from cart button"
          wire:click="removeFromCart({{ $cartItem->product->id }})" onclick="removeItem(this)">
          <svg>
