@@ -22,30 +22,30 @@
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('store-header')->html();
-} elseif ($_instance->childHasBeenRendered('QIMcR5E')) {
-    $componentId = $_instance->getRenderedChildComponentId('QIMcR5E');
-    $componentTag = $_instance->getRenderedChildComponentTagName('QIMcR5E');
+} elseif ($_instance->childHasBeenRendered('G1yqY14')) {
+    $componentId = $_instance->getRenderedChildComponentId('G1yqY14');
+    $componentTag = $_instance->getRenderedChildComponentTagName('G1yqY14');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('QIMcR5E');
+    $_instance->preserveRenderedChild('G1yqY14');
 } else {
     $response = \Livewire\Livewire::mount('store-header');
     $html = $response->html();
-    $_instance->logRenderedChild('QIMcR5E', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('G1yqY14', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('store-main')->html();
-} elseif ($_instance->childHasBeenRendered('6wV8kTC')) {
-    $componentId = $_instance->getRenderedChildComponentId('6wV8kTC');
-    $componentTag = $_instance->getRenderedChildComponentTagName('6wV8kTC');
+} elseif ($_instance->childHasBeenRendered('zTyzEBT')) {
+    $componentId = $_instance->getRenderedChildComponentId('zTyzEBT');
+    $componentTag = $_instance->getRenderedChildComponentTagName('zTyzEBT');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('6wV8kTC');
+    $_instance->preserveRenderedChild('zTyzEBT');
 } else {
     $response = \Livewire\Livewire::mount('store-main');
     $html = $response->html();
-    $_instance->logRenderedChild('6wV8kTC', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('zTyzEBT', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

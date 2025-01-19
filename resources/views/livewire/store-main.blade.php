@@ -96,11 +96,8 @@
             href="{{ route('product', ['product' => $product->seo_id !== null && $product->seo_id !== '' ? $product->seo_id : $product->id]) }}">{{ $product->name }}</a>
           </h2>
           @php
-           if (app()->has('global_cache_data') && app('global_cache_data') === 'true') {
-               $primaryCategory = $product->product_categories->where('primary_category', true)->first();
-           } else {
+
                $primaryCategory = $product->product_categories->first();
-           }
           @endphp
 
           @if ($primaryCategory && $primaryCategory->category)
