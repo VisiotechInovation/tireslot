@@ -57,7 +57,6 @@ class ShowProduct extends Component
       'ean' => $this->product->ean,
       'seo_id' => $this->product->seo_id,
       'type' => $this->product->type,
-      'brand' => $this->product->brand,
       'comments' => $this->product->comments
 
     ];
@@ -100,9 +99,7 @@ class ShowProduct extends Component
       if (array_key_exists('type', $product_new)) {
         $new->type = $product_new['type'];
       }
-      if (array_key_exists('brand', $product_new)) {
-        $new->brand = $product_new['brand'];
-      }
+
       if (array_key_exists('start_date', $product_new)) {
         $new->start_date = $product_new['start_date'];
       }

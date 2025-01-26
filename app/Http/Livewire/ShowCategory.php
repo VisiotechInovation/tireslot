@@ -49,7 +49,6 @@ class ShowCategory extends Component
       'long_description' => $this->category->long_description,
       'seo_title' => $this->category->seo_title,
       'seo_id' => $this->category->seo_id,
-      'slider_sequence' => $this->category->slider_sequence,
       'acc_items' => $this->category->accepted_items,
       'preload' => $this->category->preload_image,
       'varprice' => $this->category->display_variant_price
@@ -96,9 +95,7 @@ class ShowCategory extends Component
       if (array_key_exists('acc_items', $category_new)) {
         $new->accepted_items = $category_new['acc_items'];
       }
-      if (array_key_exists('slider_sequence', $category_new)) {
-        $new->slider_sequence = $category_new['slider_sequence'];
-      }
+
       if (array_key_exists('active', $category_new)) {
         $new->active = $category_new['active'];
       }

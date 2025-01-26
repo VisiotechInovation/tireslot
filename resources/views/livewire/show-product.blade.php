@@ -142,15 +142,7 @@
    </div>
    {{-- Product IsNew --}}
   </div>
-  {{-- Product Brand --}}
-  <div class="input__tabs">
-   @if ($editproduct === null)
-    <span class="disabled">{{ $product->brand }}</span>
-   @else
-    <input type="text" placeholder=" " name="product__brand" wire:model.defer="prod.brand" required>
-   @endif
-   <label for="product__name">Brand</label>
-  </div>
+
 
   {{-- Product Type --}}
   <div class="input__tabs">

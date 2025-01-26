@@ -191,15 +191,6 @@
   </div>
   <div class="details__checkboxes">
 
-   {{-- Category Slider Sequence --}}
-   <div class="input__tabs">
-    @if ($editcategory === null)
-     <span class="disabled">{{ $category->slider_sequence }}</span>
-    @else
-     <input type="number" placeholder=" " name="category__name" wire:model.defer="cat.slider_sequence" required>
-    @endif
-    <label for="category__name">Slider Sequence</label>
-   </div>
 
    {{-- Category Sequence --}}
    <div class="input__tabs">

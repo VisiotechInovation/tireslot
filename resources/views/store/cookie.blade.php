@@ -1,23 +1,23 @@
-<x-store-head :canonical="'cookie'" :title="' Cookie'" :description="'Cookie'"/>
+<x-store-head :canonical="'cookie'" :title="'Cookie'" :description="'Cookie'"/>
 @livewire('store-header')
 <main>
 	<!---------------------------------------------------------->
 	<!------------------------Breadcrumbs----------------------->
 	<div class="breadcrumbs container">
 		<a class="breadcrumbs__link" href="{{ url("/") }}">
-			Acasă
+			Home
 		</a>
 		<a class="breadcrumbs__link" href="{{ url("/cookie") }}">
-			Politica de Cookie-uri
+			Cookie Policy
 		</a>
 	</div>
 	<!----------------------End Breadcrumbs--------------------->
 	<!---------------------------------------------------------->
 	<!----------------------Section Header---------------------->
 	<section class="section__header container">
-		<h1 class="section__title">Politica de Cookie-uri</h1>
+		<h1 class="section__title">Cookie Policy</h1>
 		<p class="section__text">
-			Politica de utilizare Cookie-uri și tehnologii similare
+			Cookie and similar technology usage policy
 		</p>
 	</section>
 	<!--------------------End Section Header-------------------->
@@ -26,173 +26,136 @@
   <section class="container contract__container">
     <div class="contract">
         <h4 class="contract__subtitle">
-            Politica de utilizare Cookie-uri și tehnologii similare
+            Cookie and similar technology usage policy
+        </h4>
+    </div>
+    <div class="contract">
+        <h4 class="contract__subtitle">
+            Cookies are used for the following purposes:
         </h4>
         <p class="contract__descr">
-            Această politică se referă la cookie-urile și la tehnologiile similare folosite, după caz, în
-            website-urile și aplicațiile operate de MOLDASO LINE S.R.L.(denumită în continuare noren).
+            website functionality,
+        </p>
+        <p class="contract__descr">
+            analysis of site visitor behavior,
+        </p>
+        <p class="contract__descr">
+            advertising purposes.
+        </p>
+        <p class="contract__descr">
+            This policy complements the general data protection policy that you can find here, as well as the site Terms and Conditions available
+            <a href="{{ url("/terms") }}">here</a>, which we encourage you to read. They include additional useful information, such as all purposes for data processing, your rights, as well as any exceptions and limitations, etc.
+        </p>
+        <p class="contract__descr">
+            Proper protection of personal data is an important goal for  . Our desire is to be as clear and transparent as possible regarding our approach in this matter. For any questions, please contact us.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Cookie-urile sunt folosite pentru următoarele scopuri:
+            What are Cookies?
         </h4>
         <p class="contract__descr">
-            de funcționare a site-ului,
-        </p>
-        <p class="contract__descr">
-            de analiză a comportamentului vizitatorilor site-ului,
-        </p>
-        <p class="contract__descr">
-            pentru publicitate.
-        </p>
-        <p class="contract__descr">
-            Această politică se completează cu politica noren cu privire la protecția datelor personale
-            în general pe care o puteți găsi aici și cu Termenii și Condițiile site-ului pe care le puteți găsi
-            <a href="{{ url("/terms") }}">aici</a>, pe care vă încurajăm să le citiți, acestea incluzând informații
-            suplimentare utile, inclusiv toate scopurile prelucrărilor de date de către noren, drepturile
-            dumneavoastră, precum și excepțiile și limitele acestora etc.
-        </p>
-        <p class="contract__descr">
-            Protecția corespunzătoare a datelor cu caracter personal este un obiectiv important pentru noren.
-            Dorința noastră este să fim cât mai clari și transparenți cu privire la abordarea noren
-            în materie. Pentru orice întrebare, vă rugăm să ne contactați la contact@noren.ro.
+            A cookie is a small file, consisting of letters and numbers, which will be stored on the user's computer, mobile device, or other equipment used to access the internet. The cookie is installed by a request from the user's device to a server or a third-party server.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Ce sunt Cookie-urile?
+            What are Cookies used for?
         </h4>
         <p class="contract__descr">
-            Cookie-ul este un fișier de mici dimensiuni, format din litere și numere, care va fi stocat pe
-            computerul, terminalul mobil sau alte echipamente ale unui utilizator de pe care se accesează
-            internetul. Cookie-ul este instalat prin solicitarea emisă de către terminalul utilizatorului către
-            un server noren sau către un server al unei terțe părți.
+            These files mainly make it possible to recognize the user's device and present content in a way that is relevant and adapted to the user's preferences. Cookies provide users with a pleasant browsing experience and support  in offering more personalized services. They are also used for preparing anonymous aggregated statistics that help us understand how a user benefits from our website pages, allowing us to improve their structure and content, without allowing personal identification of the user.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            La ce sunt folosite Cookie-urile?
+            What Cookies do we use?
         </h4>
         <p class="contract__descr">
-            Aceste fișiere fac posibilă în principal recunoașterea terminalului utilizatorului și
-            prezentarea conținutului într-un mod relevant, adaptat preferințelor utilizatorului. Cookie-urile
-            asigură
-            utilizatorilor o experiență plăcută de navigare și susțin eforturile noren pentru a oferi
-            servicii mai adaptate utilizatorilor. De asemenea, sunt utilizate în pregătirea unor statistici anonime
-            agregate care ne ajută să înțelegem cum un utilizator beneficiază de paginile noastre de
-            internet, permițându-ne îmbunătățirea structurii și conținutului lor, fără a permite identificarea
-            personală a utilizatorului.
+            We use two types of Cookies: session and persistent. Session cookies are temporary files that remain on the user's device until the session ends or the application is closed. Persistent cookies stay on the user's device for a specified period determined by the cookie parameters or until manually deleted by the user.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Ce Cookie-uri folosim?
+            How are cookies used by this site?
         </h4>
         <p class="contract__descr">
-            Folosim două tipuri de Cookie-uri: per sesiune și fixe. Cookie-urile per sesiune sunt fișiere
-            temporare ce rămân în terminalul utilizatorului până la terminarea sesiunii sau
-            închiderea aplicației. Cookie-urile fixe rămân pe terminalul utilizatorului pe o perioadă determinată de
-            parametrii Cookie-ului sau până sunt șterse manual de utilizator.
+            A visit to this site may place the following types of cookies:
+        </p>
+        <p class="contract__descr">
+            Strictly necessary cookies for the site's operation
+        </p>
+        <p class="contract__descr">
+            Analytics cookies
+        </p>
+        <p class="contract__descr">
+            Advertising cookies
+        </p>
+        <p class="contract__descr">
+            Strictly necessary cookies and/or similar technologies are essential for the proper functioning of the site and are set on your device when accessing the site or as a result of actions taken on the site. You can configure your browser to block cookies, but in this case, some sections of the site may not function properly.
+        </p>
+        <p class="contract__descr">
+            The other categories of cookies have the role indicated in this document.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Cum sunt folosite cookie-urile de către acest site?
+            Do cookies or similar technologies contain personal data?
         </h4>
         <p class="contract__descr">
-            O vizită pe acest site poate plasa următoarele tipuri de cookie-uri:
-        </p>
-        <p class="contract__descr">
-            Cookie-uri strict necesare pentru funcționarea site-ului
-        </p>
-        <p class="contract__descr">
-            Cookie-uri de analiză
-        </p>
-        <p class="contract__descr">
-            Cookie-uri pentru publicitate
-        </p>
-        <p class="contract__descr">
-            Cookie-urile și/sau tehnologiile similare strict necesare sunt esențiale pentru buna funcționare a
-            site-ului, fiind setate pe dispozitivul dumneavoastră la accesarea site-ului sau în urma
-            acțiunilor efectuate în site, după caz. Puteți seta browser-ul dumneavoastră pentru a bloca
-            cookie-urile, însă în acest caz anumite secțiuni ale site-ului nu vor funcționa corect.
-        </p>
-        <p class="contract__descr">
-            Celelalte categorii de cookie-uri au rolul indicat în prezentul document.
+            Cookies or similar technologies themselves do not require personal information to be used and, in many cases, do not personally identify internet users. However, there are situations where personal data can be collected through the use of cookies to facilitate certain features for the user or to provide a more personalized experience. Such data is encrypted in a way that prevents unauthorized access to it.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Conțin Cookie-urile sau tehnologiile similare date personale?
+            What are similar technologies?
         </h4>
         <p class="contract__descr">
-            Cookie-urile sau tehnologiile similare în sine nu solicită informații cu caracter personal
-            pentru a putea fi utilizate și, în multe cazuri, nici nu identifică personal utilizatorii de internet.
-            Există însă situații când datele personale pot fi colectate prin utilizarea
-            cookie-urilor pentru a facilita anumite funcționalități pentru utilizator sau pentru a oferi
-            utilizatorului
-            o
-            experiență mai adaptată preferințelor sale. Astfel de date sunt criptate într-un mod care face
-            imposibil accesul persoanelor neautorizate la ele.
+            There are other technologies that can be used for the same purposes as cookies.
+        </p>
+        <p class="contract__descr">
+              uses Local Storage as a similar technology.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Ce sunt tehnologiile similare?
+            Blocking cookies
         </h4>
         <p class="contract__descr">
-            Există alte tehnologii care pot fi utilizate în aceleași scopuri precum Cookie-urile.
-        </p>
-        <p class="contract__descr">
-            noren utilizează ca tehnologie similara Local Storage.
+            If you wish to block cookies, some site functionalities will be disabled, which may cause certain malfunctions or errors in using our site. For example, blocking cookies may prevent you from:
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Blocare cookie-uri
+            making online purchases
         </h4>
         <p class="contract__descr">
-            În cazul în care doriți sa blocați cookie-urile, unele funcționalități ale site‑ului vor
-            fi oprite, iar acest lucru poate genera anumite disfuncționalități sau erori în folosirea
-            site-ului nostru. De exemplu, blocarea cookie-urilor vă poate împiedica să:
+            logging into your account
+        </p>
+        <p class="contract__descr">
+            If you agree to these limitations and wish to block cookies, follow the instructions below:
+        </p>
+        <p class="contract__descr">
+            Most browsers are set by default to accept cookies, but you can change the settings to block some or all cookies.
+        </p>
+        <p class="contract__descr">
+            Choose your browser from the list below to see the instructions you need to follow after opening your browser.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            cumpărați online
+            Microsoft Internet Explorer 9 (Windows 7)
         </h4>
         <p class="contract__descr">
-            vă autentificați în contul dumneavoastră
+            click on the Settings icon (top right)
         </p>
         <p class="contract__descr">
-            În cazul în care ești de acord cu aceste limitări și dorești să blochezi cookie-urile,
-            urmează instrucțiunile de mai jos:
+            click on Internet Options
         </p>
         <p class="contract__descr">
-            Cele mai multe browsere sunt setate implicit să accepte cookie-uri, dar aveți posibilitatea să
-            modificați setările pentru a bloca unele sau toate cookie-urile.
+            click on Privacy and then choose the options
         </p>
         <p class="contract__descr">
-            Alege browser-ul tău din lista de mai jos pentru a afișa instrucțiunile pe care trebuie să le
-            parcurgeți după deschiderea browser-ului.
-        </p>
-    </div>
-    <div class="contract">
-        <h4 class="contract__subtitle">
-            Microsoft Internet Explorer 9 (sistem de operare Windows 7)
-        </h4>
-        <p class="contract__descr">
-            fă click pe pictograma Setări(dreapta sus)
-        </p>
-        <p class="contract__descr">
-            fă click pe Opțiuni Internet
-        </p>
-        <p class="contract__descr">
-            click pe Confidențialitate și apoi alege opțiunile
-        </p>
-        <p class="contract__descr">
-            click pe Aplicare și apoi pe OK pentru salvarea preferințelor
+            click Apply and then OK to save preferences
         </p>
     </div>
     <div class="contract">
@@ -200,19 +163,19 @@
             Google Chrome
         </h4>
         <p class="contract__descr">
-            fă click pe pictograma cheie și selectează Opțiuni din listă
+            click on the key icon and select Options from the list
         </p>
         <p class="contract__descr">
-            click pe tabul „Setări avansate”
+            click on the "Advanced settings" tab
         </p>
         <p class="contract__descr">
-            fă click pe Setări privind conținutul din secțiunea Confidențialitate.
+            click on Content Settings in the Privacy section.
         </p>
         <p class="contract__descr">
-            alege setările pe care le dorești
+            choose the settings you want
         </p>
         <p class="contract__descr">
-            click pe X pentru a închide
+            click X to close
         </p>
     </div>
     <div class="contract">
@@ -220,16 +183,16 @@
             Safari
         </h4>
         <p class="contract__descr">
-            alege Preferințe
+            choose Preferences
         </p>
         <p class="contract__descr">
-            fă click pe panoul de confidențialitate
+            click on the privacy panel
         </p>
         <p class="contract__descr">
-            alege setările pe care le dorești
+            choose the settings you want
         </p>
         <p class="contract__descr">
-            click pe X pentru a închide
+            click X to close
         </p>
     </div>
     <div class="contract">
@@ -237,125 +200,94 @@
             Mozilla Firefox
         </h4>
         <p class="contract__descr">
-            selectează Instrumente din bara principala, apoi Opțiuni
+            select Tools from the main bar, then Options
         </p>
         <p class="contract__descr">
-            click pe tabul Confidențialitate
+            click on the Privacy tab
         </p>
         <p class="contract__descr">
-            alege setările pe care le dorești
+            choose the settings you want
         </p>
         <p class="contract__descr">
-            click pe OK pentru a închide
+            click OK to close
         </p>
         <p class="contract__descr">
-            Link-urile de mai sus nu aparțin unor site-uri noren și noren nu este responsabil de
-            conținutul acestora.
-        </p>
-    </div>
-    <div class="contract">
-        <h4 class="contract__subtitle">
-            Administrarea preferințelor cu privire la plasarea de Cookie-uri
-        </h4>
-        <p class="contract__descr">
-            În general, o aplicație folosită pentru accesarea paginilor web permite salvarea Cookie-urilor
-            și/sau a tehnologiilor similare pe terminal în mod implicit. Aceste setări pot fi schimbate
-            în așa fel încât administrarea automată a Cookie-urilor să fie blocată de
-            browser-ul web sau utilizatorul să fie informat de fiecare dată când Cookie-uri sunt trimise către
-            terminalul său. Informații detaliate despre posibilitățile și modurile de administrare a Cookie-urilor
-            pot
-            fi
-            găsite în zona de setări a aplicației (browser-ului web). Limitarea folosirii Cookie-urilor
-            poate afecta anumite funcționalități ale website-ului.
+            The links above do not belong to   and   is not responsible for their content.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            De ce sunt Cookie-urile și/sau tehnologiile similare importante pentru Internet?
+            Managing cookie preferences
         </h4>
         <p class="contract__descr">
-            Cookie-urile și/sau tehnologiile similare reprezintă un punct central al funcționării eficiente a
-            Internetului, ajutând la generarea unei experiențe de navigare prietenoase și adaptate
-            preferințelor și intereselor fiecărui utilizator. Refuzarea sau dezactivarea Cookie-urilor poate
-            face unele site-uri sau părți ale site-urilor imposibil de folosit.
-        </p>
-        <p class="contract__descr">
-            Dezactivarea Cookie-urilor nu înseamnă că nu veți mai primi, cu respectarea legislației,
-            publicitate online – ci doar că aceasta nu va mai putea ține cont de preferințele și
-            interesele dvs., evidențiate prin comportamentul de navigare.
+            In general, an application used to access web pages allows cookies and/or similar technologies to be saved to the device by default. These settings can be changed so that automatic cookie management is blocked by the web browser, or the user is notified each time cookies are sent to the terminal. Detailed information about the possibilities and ways of managing cookies can be found in the settings area of the application (web browser). Limiting the use of cookies may affect certain website functionalities.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Exemple de întrebuințări importante ale Cookie-urilor (care nu necesită autentificarea unui
-            utilizator prin intermediul unui cont):
+            Why are cookies and/or similar technologies important for the internet?
         </h4>
         <p class="contract__descr">
-            Conținut și servicii adaptate preferințelor utilizatorului – categorii de produse și servicii.
+            Cookies and/or similar technologies are a central point in the efficient functioning of the internet, helping to generate a friendly browsing experience tailored to each user's preferences and interests. Refusing or disabling cookies may make some websites or parts of websites impossible to use.
         </p>
         <p class="contract__descr">
-            Oferte adaptate intereselor utilizatorilor
-        </p>
-        <p class="contract__descr">
-            Reținerea parolelor
-        </p>
-        <p class="contract__descr">
-            Reținerea filtrelor de protecție a copiilor privind conținutul pe Internet (opțiuni family mode,
-            funcții de safe search).
-        </p>
-        <p class="contract__descr">
-            Limitarea frecvenței de difuzare a reclamelor – limitarea numărului de afișări a unei reclame
-            pentru un anumit utilizator pe un site.
-        </p>
-        <p class="contract__descr">
-            Furnizarea de publicitate relevantă pentru utilizator.
-        </p>
-        <p class="contract__descr">
-            Măsurarea, optimizarea și adaptarea caracteristicilor de analiză – cum ar fi confirmarea unui
-            anumit nivel de trafic pe un website, ce tip de conținut este vizualizat și modul cum un utilizator
-            ajunge pe un website (ex: prin motoare de căutare, direct, din alte website-uri etc.). Website-urile
-            derulează aceste analize privitoare la utilizarea lor pentru a-și îmbunătăți serviciile
-            în beneficiul utilizatorilor.
+            Disabling cookies does not mean you will no longer receive online advertising – it simply means that the advertising will no longer take your preferences and interests into account, based on your browsing behavior.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Securitate și aspecte legate de confidențialitate
+            Important examples of cookie use (that do not require user authentication through an account):
         </h4>
         <p class="contract__descr">
-            În general browserele au integrate setări de confidențialitate care furnizează diferite
-            niveluri de acceptare a Cookie-urilor, perioada de valabilitate și ștergere automată după ce
-            utilizatorul a
-            vizitat un anumit site.
+            Content and services adapted to the user's preferences – categories of products and services.
+        </p>
+        <p class="contract__descr">
+            Offers tailored to user interests
+        </p>
+        <p class="contract__descr">
+            Remembering passwords
+        </p>
+        <p class="contract__descr">
+            Remembering child protection filters regarding online content (family mode options, safe search features).
+        </p>
+        <p class="contract__descr">
+            Limiting ad frequency – limiting the number of times an ad is shown to a specific user on a site.
+        </p>
+        <p class="contract__descr">
+            Providing relevant advertising to the user.
+        </p>
+        <p class="contract__descr">
+            Measuring, optimizing, and adapting analytics features – such as confirming a certain level of traffic on a website, what type of content is viewed, and how a user arrives at a website (e.g., through search engines, directly, from other websites, etc.). Websites conduct these analyses to improve their services for the benefit of users.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Alte aspecte de securitate legate de Cookie-uri:
+            Security and privacy aspects
         </h4>
         <p class="contract__descr">
-            Particularizarea setărilor browserului în ceea ce privește cookie-urile pentru a reflecta un
-            nivel
-            confortabil pentru dumneavoastră al securității utilizării cookie-urilor.
-        </p>
-        <p class="contract__descr">
-            Dacă sunteți singura persoană care utilizează computerul, puteți seta, dacă doriți, termene lungi de
-            expirare pentru stocarea istoricului de navigare și a datelor personale de acces.
-        </p>
-        <p class="contract__descr">
-            Dacă împărțiți accesul la calculator, puteți lua în considerare setarea browserului
-            pentru a șterge datele individuale de navigare de fiecare dată când închideți browserul. Aceasta
-            este o variantă de a accesa site-urile care plasează Cookie-uri și de a șterge orice informație de
-            vizitare la închiderea sesiunii de navigare.
+            In general, browsers have built-in privacy settings that provide different levels of cookie acceptance, validity periods, and automatic deletion after a user has visited a certain site.
         </p>
     </div>
     <div class="contract">
         <h4 class="contract__subtitle">
-            Linkuri și informații suplimentare utile
+            Other security aspects related to cookies:
         </h4>
         <p class="contract__descr">
-            Dacă doriți să aflați mai multe informații despre Cookie-uri și la ce sunt utilizate, recomandăm
-            următoarele linkuri:
+            Customizing browser settings regarding cookies to reflect a comfortable security level for your use of cookies.
+        </p>
+        <p class="contract__descr">
+            If you are the only person using your computer, you can set long expiration terms for storing browsing history and personal access data if you wish.
+        </p>
+        <p class="contract__descr">
+            If you share access to the computer, you might consider setting your browser to delete individual browsing data every time you close the browser. This is an option for accessing sites that place cookies and deleting any visit information upon closing the browsing session.
+        </p>
+    </div>
+    <div class="contract">
+        <h4 class="contract__subtitle">
+            Links and additional useful information
+        </h4>
+        <p class="contract__descr">
+            If you want to learn more about cookies and their uses, we recommend the following links:
         </p>
         <p class="contract__descr">
             <a class="contract__link" href="https://www.youronlinechoices.com/ro/">youronlinechoices.com/ro</a>

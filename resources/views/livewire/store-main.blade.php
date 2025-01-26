@@ -14,6 +14,21 @@
        $decimal = ',';
    }
   @endphp
+ <section class="promo-section">
+    <div class="container">
+        <div class="promo-content">
+            <div class="image-wrapper">
+                <img src="images/store/banner.jpg" alt="Promo Banner" class="promo-image">
+                <div class="promo-text">
+                    <h2 class="promo-title">Upgrade Your Ride with Quality Tires</h2>
+                    <p class="promo-description">Check out our exclusive deals on premium tires that deliver performance, safety, and durability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
   @if ($newproducts->isNotEmpty())
    <section>
     <div class="section__header container">
@@ -172,6 +187,148 @@
    </section>
   @endif
  </main>
+ <script>
+
+Sure! I understand you want to keep the same structure and make sure the image is used as an img element instead of a background-image. Here’s how you can modify the section in Blade, SCSS, and JavaScript to use an img tag while still maintaining the image overlay and hover effects.
+
+Updated Blade (HTML):
+In your Blade file (resources/views/welcome.blade.php or any other view file):
+
+blade
+Copy
+Edit
+<section class="promo-section">
+    <div class="container">
+        <div class="promo-content">
+            <div class="image-wrapper">
+                <img src="{{ asset('images/store/banner.jpg') }}" alt="Promo Banner" class="promo-image">
+                <div class="promo-text">
+                    <h2 class="promo-title">Upgrade Your Ride with Quality Tires</h2>
+                    <p class="promo-description">Check out our exclusive deals on premium tires that deliver performance, safety, and durability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+Updated SCSS:
+In your SCSS file (resources/sass/styles.scss):
+
+scss
+Copy
+Edit
+.promo-section {
+  padding: 60px 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Set fixed height for desktop */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image is confined within the wrapper */
+    transition: transform 0.5s ease;
+
+    .promo-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the area without distortion */
+      transition: transform 0.5s ease;
+    }
+
+    &:hover .promo-image {
+      transform: scale(1.05); /* Zoom the image on hover */
+    }
+  }
+
+  .promo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    max-width: 80%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .promo-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .promo-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Desktop styles */
+  @media screen and (min-width: 1024px) {
+    .image-wrapper {
+      height: 250px;
+    }
+
+    .promo-section:hover .promo-text {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* Mobile styles */
+  @media screen and (max-width: 1024px) {
+    .image-wrapper {
+      height: 200px; /* Adjusted height on mobile */
+    }
+
+    .promo-title {
+      font-size: 28px; /* Smaller title on mobile */
+    }
+
+    .promo-description {
+      font-size: 16px; /* Smaller description on mobile */
+    }
+
+    .promo-section:hover .promo-text {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+Updated JavaScript (app.js or inline script):
+You can still use the same JavaScript as before. Place it in your app.js or inline in your Blade file:
+
+javascript
+Copy
+Edit
+document.addEventListener("DOMContentLoaded", function () {
+  const promoSection = document.querySelector('.promo-section');
+
+  promoSection.addEventListener('mouseenter', () => {
+    promoSection.style.transition = 'transform 0.3s ease-in-out';
+    promoSection.style.transform = 'scale(1.02)';
+  });
+
+  promoSection.addEventListener('mouseleave', () => {
+    promoSection.style.transition = 'transform 0.3s ease-in-out';
+    promoSection.style.transform = 'scale(1)';
+  });
+});
+
+</script>
  <script>
   document.addEventListener("livewire:load", function() {
    injectJsonLd();

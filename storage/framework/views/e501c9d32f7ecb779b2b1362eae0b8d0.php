@@ -16,8 +16,8 @@
    </p>
   </div>
   <button class="newsletter__close" aria-label="Close Newsletter">
-   <?php if(app()->has('newsletter_close_button')): ?>
-    <?php echo app('newsletter_close_button'); ?>
+   <?php if(app()->has('label_newsletter_close_button')): ?>
+    <?php echo app('label_newsletter_close_button'); ?>
 
    <?php endif; ?>
   </button>

@@ -1,4 +1,4 @@
-<x-store-head :canonical="'confirm'" :title="' Confirmare trimitere mesaj'" :description="'Confirmare trimitere mesaj'" />
+<x-store-head :canonical="'confirm'" />
 @livewire('store-header')
 <main>
 	<!---------------------------------------------------------->

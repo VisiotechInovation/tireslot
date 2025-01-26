@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Stripe\Stripe;
 use App\Models\Cart;
 use App\Models\Order;
+use GuzzleHttp\Client;
 use App\Models\Account;
 use App\Models\Address;
 use App\Models\Voucher;
@@ -12,7 +13,8 @@ use Livewire\Component;
 use App\Models\Cart_Item;
 use App\Models\Order_Item;
 use Stripe\Checkout\Session;
-use GuzzleHttp\Client;
+use App\Mail\ConfirmationOrder;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Cache;
 
 
@@ -929,9 +931,13 @@ class StoreOrder extends Component
 
         $this->step = 3;
         $this->new_order = $order;
-
+        try {
+        } catch (\Throwable $th) {
+          return;
+        }
         $this->emit('orderprocess');
         $this->dispatchBrowserEvent('goup');
+        Mail::to($order->account->email)->send(new ConfirmationOrder($order));
       } else {
         $this->cart->update([
           'order_id' => $order->id,
