@@ -25,30 +25,6 @@
     <polyline points="15 18 9 12 15 6"></polyline>
    </svg>
   </a>
-  <div class="dropdown dropdown--right">
-   {{-- Dropdown Button --}}
-   <button class="button button--primary  button--centered button--long dropdown__button" tooltip="Actions with checked"
-    tooltip-top>
-    <span>Invoice</span>
-   </button>
-   {{-- Dropdown Content --}}
-   <div class="dropdown__content">
-    <div class="dropdown__container">
-     <button class="button button--primary button--long" wire:click="generate_invoice_number()">
-      Get invoice number
-     </button>
-     <button class="button button--primary button--long" wire:click="generate_invoice()">
-      Generate invoice
-     </button>
-     <button class="button button--primary button--long" wire:click="generate_storno_number()">
-      Get storno number
-     </button>
-     <button class="button button--primary button--long" wire:click="generate_storno()">
-      Generate storno
-     </button>
-    </div>
-   </div>
-  </div>
   @if ($edititem === null)
    <button class="button button--primary button--centered" tooltip="Edit this Order" tooltip-left
     wire:click.prevent="edititem()">
@@ -184,38 +160,7 @@
     <label for="category__name">Voucher Value</label>
    </div>
   @endif
-  {{-- Product Start Date --}}
-  <div class="input__tabs">
-   <span class="disabled">{{ $order->invoice_series }}</span>
 
-   <label for="product__name">Invoice Series</label>
-  </div>
-  <div class="input__tabs">
-   @if ($edititem === null)
-    <span class="disabled">{{ $order->invoice_date }}</span>
-   @else
-    <input type="date" wire:model.defer="record.invoice_date">
-   @endif
-   <label for="product__name">Invoice Date</label>
-  </div>
-  <div class="input__tabs">
-   @if ($edititem === null)
-    <span class="disabled">{{ $order->storno_date }}</span>
-   @else
-    <input type="date" wire:model.defer="record.storno_date">
-   @endif
-   <label for="product__name">Storno Date</label>
-  </div>
-  {{-- Product Popularity --}}
-
-  <div class="input__tabs">
-   <span class="disabled">{{ $order->external_invoice_number }}</span>
-   <label>External Invoice Number</label>
-  </div>
-  <div class="input__tabs">
-   <span class="disabled">{{ $order->external_storno_number }}</span>
-   <label>External Storno Number</label>
-  </div>
   {{-- Create date / time --}}
   <div class="input__tabs">
    <span class="disabled">{{ $order->created_at }}</span>
@@ -240,7 +185,6 @@
  {{-- Tabs Body (Related) --}}
  <div style="height: calc(100% - 107.5px);" class="tabs__content related__view" id="relatedContent">
   @livewire('related-order-items', ['order' => $order])
-  @livewire('related-invoices', ['relatedby' => 'order', 'id' => $order->id])
 
  </div>
 </section>
