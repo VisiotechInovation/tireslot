@@ -19,7 +19,7 @@
         <div class="promo-content">
             <div class="image-wrapper">
                 <img src="images/store/banner.jpg" alt="Promo Banner" class="promo-image">
-                <div class="promo-text">
+                <div  class="promo-text">
                     <h2 class="promo-title">Upgrade Your Ride with Quality Tires</h2>
                     <p class="promo-description">Check out our exclusive deals on premium tires that deliver performance, safety, and durability.</p>
                 </div>

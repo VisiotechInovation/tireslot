@@ -3249,13 +3249,14 @@ section {
   text-align: center;
   color: white;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Darker background for better readability */
   border-radius: 8px;
-  max-width: 80%;
-  opacity: 0;
-  z-index: 9999;
-  /* Initially hidden */
+  max-width: 100%;
+  opacity: 1;
+  /* Always visible */
+  z-index: 10000;
+  /* Ensures it's above the image */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .promo-section .promo-title {
@@ -3284,20 +3285,23 @@ section {
 @media screen and (max-width: 1024px) {
   .promo-section .image-wrapper {
     height: 200px;
-    /* Adjusted height on mobile */
+  }
+  .promo-section .promo-text {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    left: 0;
+    transform: translate(0, -50%);
+    border-radius: 0;
+    /* Remove rounded edges for full width */
   }
   .promo-section .promo-title {
-    font-size: 28px;
-    /* Smaller title on mobile */
+    font-size: 24px;
+    /* Slightly smaller title for mobile */
   }
   .promo-section .promo-description {
-    font-size: 16px;
-    /* Smaller description on mobile */
-  }
-  .promo-section .promo-section:hover .promo-text {
-    opacity: 1;
-    /* Show text when hovered */
-    transform: translate(-50%, -50%);
+    font-size: 14px;
+    /* Smaller description for better fit */
   }
 }
 
