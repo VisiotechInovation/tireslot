@@ -374,13 +374,7 @@
       $i = 0;
      @endphp
      @foreach ($products as $nr => $product)
-      @if (
-          $column === 'long_description' ||
-              $column === 'comments' ||
-              $column === 'short_description' ||
-              $column === 'meta_description')
-       <?php continue; ?>
-      @endif
+
       <tr @if ($loop->last) id="last_record" @endif
        class="expandable-row @if ($this->isChecked($product->id)) active @endif">
        <td style="border-left: none" data-title="Check">
@@ -390,6 +384,13 @@
         </div>
        </td>
        @foreach ($selectedColumns as $index => $column)
+       @if (
+          $column === 'long_description' ||
+              $column === 'comments' ||
+              $column === 'short_description' ||
+              $column === 'meta_description')
+       <?php continue; ?>
+      @endif
         <td @if ($index > count($selectedColumns) - 19) class="hidden" @endif data-title="{{ $column }}"
          wire:click="expandRow({{ $nr }})">
          @if ($column === 'name')

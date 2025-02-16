@@ -333,20 +333,20 @@ svg {
 }
 .logo {
   width: auto;
-  height: 100%;
+  height: 50px;
   max-height: 35px;
   display: inline-block;
 }
 .logo img {
   width: auto;
-  height: 100%;
+  height: 50px;
 }
 
 .logo.display--desktop {
   margin-right: auto;
 }
 .logo.display--desktop > img {
-  aspect-ratio: 26/5;
+  aspect-ratio: 1/1;
 }
 
 .logo.display--mobile {
@@ -373,7 +373,7 @@ svg {
   border-color: #111a24;
 }
 .line--secondary {
-  border-color: #ffd500;
+  border-color: #fAfAfA;
 }
 
 @keyframes loginValidationFail {
@@ -572,7 +572,7 @@ svg {
   padding: 0;
 }
 .button--primary {
-  color: #ffd500;
+  color: #fAfAfA;
   background-color: #090d13;
 }
 @media (hover: hover) {
@@ -598,56 +598,56 @@ svg {
 }
 .button--secondary {
   color: #111a24;
-  background-color: #ffd500;
+  background-color: #fAfAfA;
 }
 @media (hover: hover) {
   .button--secondary:hover {
-    background-color: #e6c000;
+    background-color: #ededed;
     outline: none;
   }
   .button--secondary:active {
-    background-color: #998000;
+    background-color: #c7c7c7;
     outline: none;
   }
   .button--secondary:focus-visible {
-    background-color: #998000;
-    outline: 2px solid #998000;
+    background-color: #c7c7c7;
+    outline: 2px solid #c7c7c7;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .button--secondary:active {
-    background-color: #998000;
+    background-color: #c7c7c7;
     outline: none;
   }
 }
 .button--active {
   color: #111a24;
-  background-color: #ffd500;
+  background-color: #fAfAfA;
 }
 @media (hover: hover) {
   .button--active:hover {
-    background-color: #e6c000;
+    background-color: #ededed;
     outline: none;
   }
   .button--active:active {
-    background-color: #998000;
+    background-color: #c7c7c7;
     outline: none;
   }
   .button--active:focus-visible {
-    background-color: #998000;
-    outline: 2px solid #998000;
+    background-color: #c7c7c7;
+    outline: 2px solid #c7c7c7;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .button--active:active {
-    background-color: #998000;
+    background-color: #c7c7c7;
     outline: none;
   }
 }
 .button--danger {
-  color: #ffd500;
+  color: #fAfAfA;
   background-color: #ED2939;
 }
 @media (hover: hover) {
@@ -901,7 +901,7 @@ svg {
   top: -25px;
   left: 0;
   transform: translateY(0);
-  color: #ffd500;
+  color: #fAfAfA;
   opacity: 1;
 }
 
@@ -978,7 +978,7 @@ svg {
   top: -25px;
   left: 0;
   transform: translateY(0);
-  color: #ffd500;
+  color: #fAfAfA;
   opacity: 1;
 }
 
@@ -1103,15 +1103,15 @@ svg {
 
 *::-webkit-scrollbar-track {
   border-radius: 20px;
-  background-color: #ffd500;
+  background-color: #fAfAfA;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #ffd500;
+  background-color: #fAfAfA;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #ffd500;
+  background-color: #fAfAfA;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -1252,13 +1252,13 @@ svg {
 .radio--primary input:checked + span:before,
 .switch--primary input:checked + span:before {
   background: #111a24;
-  border-color: #ffd500;
+  border-color: #fAfAfA;
 }
 
 .radio--secondary input:checked + span:before,
 .switch--secondary input:checked + span:before {
-  background: #ffd500;
-  border-color: #ffd500;
+  background: #fAfAfA;
+  border-color: #fAfAfA;
 }
 
 .radioGroup {
@@ -1311,12 +1311,12 @@ svg {
 }
 
 .radioGroup--secondary label:hover input + span {
-  border-color: #ffd500;
+  border-color: #fAfAfA;
 }
 
 .radioGroup--secondary label input:checked + span {
-  background: #ffd500;
-  border-color: #ffd500;
+  background: #fAfAfA;
+  border-color: #fAfAfA;
 }
 
 .checkbox__details {
@@ -1562,8 +1562,8 @@ svg {
   transition: transform 0.3s ease, opacity 0.2s ease, background 0.2s ease;
 }
 .checkbox--secondary input:checked + label:before {
-  background: #ffd500;
-  border-color: #ffd500;
+  background: #fAfAfA;
+  border-color: #fAfAfA;
 }
 .checkbox--secondary input:checked + label:after {
   opacity: 1;
@@ -1575,7 +1575,7 @@ svg {
 }
 
 .error {
-  color: #ffd500;
+  color: #fAfAfA;
   background-color: #ED2939;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 900;
@@ -1933,10 +1933,10 @@ nav.nav--home {
   transition: all 0.25s ease-in-out;
   overflow-y: auto;
   padding-bottom: 75px;
-  border: 1px solid #ffd500;
+  border: 1px solid #fAfAfA;
 }
 .aside h3 {
-  color: #ffd500;
+  color: #fAfAfA;
   font-size: clamp(16px, 2vw, 18px);
   font-weight: 500;
 }
@@ -2142,7 +2142,7 @@ nav.nav--home {
   font-size: clamp(18px, 2.25vw, 20px);
   font-weight: 500;
   line-height: 150%;
-  color: #ffd500;
+  color: #fAfAfA;
   margin: 0;
   margin-top: 7.5px;
   flex: 1;
@@ -2154,7 +2154,7 @@ nav.nav--home {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #ffd500;
+  background: #fAfAfA;
   border-radius: 8px;
 }
 
@@ -2207,8 +2207,8 @@ nav.nav--home {
   width: 0% !important;
 }
 .expandable-table > tbody {
-  border-top: 1px solid #ffd500;
-  border-bottom: 1px solid #ffd500;
+  border-top: 1px solid #fAfAfA;
+  border-bottom: 1px solid #fAfAfA;
 }
 .expandable-table > tbody td {
   font-size: 12px;
@@ -2265,7 +2265,7 @@ nav.nav--home {
   background-color: black;
 }
 .expandable-table .expandable-row.active {
-  background: #ffd500;
+  background: #fAfAfA;
 }
 .expandable-table .expandable-row.active td {
   color: #111a24;
@@ -2279,7 +2279,7 @@ nav.nav--home {
 }
 .expandable-table .expandable-row.active td .button {
   background-color: #111a24;
-  color: #ffd500;
+  color: #fAfAfA;
 }
 .expandable-table .details {
   gap: 5px;
@@ -2347,7 +2347,7 @@ nav.nav--home {
   width: 100%;
   display: none;
   overflow: auto;
-  border-bottom: 2px solid #ffd500;
+  border-bottom: 2px solid #fAfAfA;
   margin: 7.5px 0;
 }
 
@@ -2424,7 +2424,7 @@ nav.nav--home {
 .login__label > input:hover + span, .login__label > input:focus + span, .login__label > input:autofill + span, .login__label > input:not(:placeholder-shown) + span {
   opacity: 1;
   transform: translateY(-165%) translateX(-15%) scale(0.75);
-  color: #ffd500;
+  color: #fAfAfA;
 }
 @media (hover: hover) {
   .login__label > input:hover {
@@ -2518,7 +2518,7 @@ nav.nav--home {
   min-height: 35px;
   padding: 15px;
   margin-top: 25px;
-  background: #ffd500;
+  background: #fAfAfA;
   color: #111a24;
   font-size: clamp(14px, 1.75vw, 16px);
   font-weight: 500;
@@ -2535,23 +2535,23 @@ nav.nav--home {
 }
 @media (hover: hover) {
   .login__button:hover {
-    background-color: #e6c000;
+    background-color: #ededed;
     outline: none;
   }
   .login__button:active {
-    background-color: #998000;
+    background-color: #c7c7c7;
     outline: none;
     transform: scale(0.95);
   }
   .login__button:focus-visible {
-    background-color: #998000;
-    outline: 2px solid #998000;
+    background-color: #c7c7c7;
+    outline: 2px solid #c7c7c7;
     outline-offset: 2px;
   }
 }
 @media (hover: none) {
   .login__button:active {
-    background-color: #998000;
+    background-color: #c7c7c7;
     outline: none;
   }
 }

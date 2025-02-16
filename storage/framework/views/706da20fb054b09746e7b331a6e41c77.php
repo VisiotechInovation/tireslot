@@ -23,8 +23,10 @@
  <!--------------------Banner(Header Top)-------------------->
  <div class="banner">
   <div class="banner__container container">
-   <a class="logo" href="<?php echo e(url('/')); ?>">
-   </a>
+    <a class="logo" href="<?php echo e(url('/')); ?>">
+          <img src="/images/store/logo.png" alt="logo">
+     </a>
+
    <div class="header__buttons">
     <div class="head__button__left">
      <button class="header__btn" id="menuOpen" aria-label="Open burger menu button">
@@ -114,7 +116,6 @@ echo $html;
    <!-------------------------Logo------------------------->
 
    <a class="logo" href="<?php echo e(url('/')); ?>" style="padding: 5px">
-    <img src="/images/store/logo.png" alt="logo">
    </a>
    <!---------------------NavMenu bar---------------------->
    <nav class="navbar__list">
@@ -223,7 +224,7 @@ echo $html;
   <div class="menu__content" id="menuContent">
    <div class="menu__top">
     <button class="menu__close" id="menuClose" href="#">
-     Închide Meniul
+     Close
      <svg>
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -308,16 +309,6 @@ echo $html;
       </li>
      <?php endif; ?>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    <li class="menufooter">Informații</li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/about')); ?>">About us</a></li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/terms')); ?>">Terms</a></li>
-
-    <li class="menufooter">Serviciu clienți</li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/cookie')); ?>">Cookies</a></li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/faq')); ?>">FAQ</a></li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/privacy')); ?>">Privacy</a></li>
-    <li class="menufooter__item"><a href="<?php echo e(url('/sitemap.xml')); ?>">Site map</a></li>
 
    </ul>
   </div>

@@ -4,8 +4,10 @@
  <!--------------------Banner(Header Top)-------------------->
  <div class="banner">
   <div class="banner__container container">
-   <a class="logo" href="{{ url('/') }}">
-   </a>
+    <a class="logo" href="{{ url('/') }}">
+          <img src="/images/store/logo.png" alt="logo">
+     </a>
+
    <div class="header__buttons">
     <div class="head__button__left">
      <button class="header__btn" id="menuOpen" aria-label="Open burger menu button">
@@ -72,7 +74,6 @@
    <!-------------------------Logo------------------------->
 
    <a class="logo" href="{{ url('/') }}" style="padding: 5px">
-    <img src="/images/store/logo.png" alt="logo">
    </a>
    <!---------------------NavMenu bar---------------------->
    <nav class="navbar__list">
@@ -162,7 +163,7 @@
   <div class="menu__content" id="menuContent">
    <div class="menu__top">
     <button class="menu__close" id="menuClose" href="#">
-     Închide Meniul
+     Close
      <svg>
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -247,16 +248,6 @@
       </li>
      @endif
     @endforeach
-    <li class="menufooter">Informații</li>
-    <li class="menufooter__item"><a href="{{ url('/about') }}">About us</a></li>
-    <li class="menufooter__item"><a href="{{ url('/contact') }}">Contact</a></li>
-    <li class="menufooter__item"><a href="{{ url('/terms') }}">Terms</a></li>
-
-    <li class="menufooter">Serviciu clienți</li>
-    <li class="menufooter__item"><a href="{{ url('/cookie') }}">Cookies</a></li>
-    <li class="menufooter__item"><a href="{{ url('/faq') }}">FAQ</a></li>
-    <li class="menufooter__item"><a href="{{ url('/privacy') }}">Privacy</a></li>
-    <li class="menufooter__item"><a href="{{ url('/sitemap.xml') }}">Site map</a></li>
 
    </ul>
   </div>
