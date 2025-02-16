@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Brand;
 use App\Models\Product;
 use Livewire\Component;
 
@@ -41,10 +42,22 @@ class StoreMain extends Component
       ->limit(15)
       ->get();
   }
+  public function getBrandsProperty()
+  {
+    return Brand::with([
+      'media' => function ($query) {
+        $query->select('path', 'name', 'type')->where('type', 'n/a');
+      }
+    ])
+      ->select('id', 'name', 'description')
+      ->limit(15)
+      ->get();
+  }
   public function render()
   {
     return view('livewire.store-main', [
-      'newproducts' => $this->newproducts
+      'newproducts' => $this->newproducts,
+      'brands' => $this->brands
     ]);
   }
   public function mount()

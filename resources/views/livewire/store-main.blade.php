@@ -27,7 +27,62 @@
         </div>
     </div>
 </section>
-
+  @if ($brands->isNotEmpty())
+   <section>
+    <div class="section__header container">
+     <h2 class="section__title">
+      @if (app()->has('label_mainpage_brands_slider_title'))
+       {!! app('label_mainpage_brands_slider_title') !!}
+      @endif
+      </h1>
+      <p class="section__text">
+       @if (app()->has('label_mainpage_brands_slider_description'))
+        {!! app('label_mainpage_brands_slider_description') !!}
+       @endif
+      </p>
+    </div>
+   </section>
+   <section>
+    <div class="card-slider container popular-slider">
+     <div class="card-slider__wrapper popular-slider__wrapper">
+      @foreach ($brands as $brand)
+       <div class="card-slider__slide popular-slider__slide card">
+        <a draggable="false"
+         href="">
+         @php
+          $mainMedia = $brand->media->firstWhere('type', 'n/a');
+         @endphp
+         @if ($mainMedia)
+          <img title="{{ $brand->name }}, {{ $brand->description }}" loading="eager" class="card-image"
+           src="/{{ $mainMedia->path }}{{ $mainMedia->name }}" alt="{{ $brand->name }}">
+         @else
+          <img title="Default image" loading="eager" class="card-image" src="/images/store/default/default300.webp"
+           alt="something wrong">
+         @endif
+        </a>
+        <div class="card-info">
+          <a class="card-button-disabled" href="/" aria-label="Disabled Add to cart button" style="cursor: pointer !important">
+           @if (app()->has('label_discover_brands_products'))
+            {!! app('label_discover_brands_products') !!}
+           @endif
+          </a>
+        </div>
+       </div>
+      @endforeach
+     </div>
+     <button class="popular-slider__button card-slider__button prev" aria-label="Previous card slider button">
+      <svg>
+       <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+     </button>
+     <button class="popular-slider__button card-slider__button next" aria-label="Next card slider button">
+      <svg>
+       <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+     </button>
+    </div>
+   </section>
+  @endif
 
   @if ($newproducts->isNotEmpty())
    <section>

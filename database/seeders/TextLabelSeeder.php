@@ -223,6 +223,9 @@ class TextLabelSeeder extends Seeder
       ['parameter' => 'pagination_to', 'value' => 'to', 'description' => 'Pagination to label', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
       ['parameter' => 'pagination_of', 'value' => 'of', 'description' => 'Pagination of label', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
       ['parameter' => 'pagination_results', 'value' => 'results', 'description' => 'Pagination results label', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
+      ['parameter' => 'discover_brands_products', 'value' => 'View Products', 'description' => 'brands products', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
+      ['parameter' => 'mainpage_brands_slider_title', 'value' => 'Discover our brands', 'description' => '', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
+      ['parameter' => 'mainpage_brands_slider_description', 'value' => 'We constantly sign brands to offer you the best.', 'description' => '', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
       // ['parameter' => '', 'value' => '', 'description' => '', 'createdby' => 'admin', 'lastmodifiedby' => 'admin', 'created_at' => $currentTime, 'updated_at' => $currentTime],
 
     ];
